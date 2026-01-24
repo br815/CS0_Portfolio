@@ -110,7 +110,7 @@ int main() {
 		cin >> userChoice;
 
 		// 2nd task: handle quit command (also depends on if user has already picked at least 1 correct hw)
-		if ((userChoice == "x" || userChoice == "X"))
+		if (userChoice == "x" || userChoice == "X")
 		{
 			if (userChoices.size() < 1)
 			{
