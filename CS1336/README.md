@@ -1,7 +1,7 @@
 <!-- To preview this markdown file in VSCode: Ctrl+Shift+V -->
 
 # CS0 Lecture Portfolio - Bushra Rahman
-CS 1336 (Programming Fundamentals Lecture) - UTD Spring 2019
+## CS 1336 (Programming Fundamentals Lecture) - UTD Spring 2019
 
 These homework assignments were done through the course and have accompanying instructions.
 

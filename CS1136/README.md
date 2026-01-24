@@ -1,7 +1,7 @@
 <!-- To preview this markdown file in VSCode: Ctrl+Shift+V -->
 
 # CS0 Laboratory Portfolio - Bushra Rahman
-CS 1136 (Programming Fundamentals Laboratory) - UTD Spring 2019
+## CS 1136 (Programming Fundamentals Laboratory) - UTD Spring 2019
 
 These labs assignments were done through [zyBooks](https://www.zybooks.com/).
 

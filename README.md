@@ -1,7 +1,7 @@
 <!-- To preview this markdown file in VSCode: Ctrl+Shift+V -->
 
 # CS0 Lecture/Laboratory Portfolio - Bushra Rahman
-CS 1336/1136 (Programming Fundamentals Lecture/Laboratory) - UTD Spring 2019
+## CS 1336/1136 (Programming Fundamentals Lecture/Laboratory) - UTD Spring 2019
 
 GitHub Pages link: https://br815.github.io/CS0_Portfolio/
 
