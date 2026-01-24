@@ -1,0 +1,4 @@
+SALES BAR CHART
+(Each X equals 1,000 dollars)
+Store 44: XXXX
+Store  3: XXXXXX
