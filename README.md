@@ -5,7 +5,7 @@
 
 GitHub Pages link: https://br815.github.io/CS0_Portfolio/
 
-This repository contains university programming assignments from my introductory C++ [lecture](/CS1336/README.md) and [laboratory](/CS1136/README.md) courses.
+This repository contains university programming assignments from my introductory C++ [lecture](/CS1336/readme.md) and [laboratory](/CS1136/readme.md) courses.
 
 The purpose of this repository is archival and educational:
 - to track my progress learning C++
