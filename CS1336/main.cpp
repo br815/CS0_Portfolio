@@ -1,6 +1,6 @@
 /*	Author:		Bushra Rahman
 	Course:		CS 1336 (Spring 2019)
-	main.cpp:	This source file contains the driver for the user to select which of the available 17 homeworks they wish to execute
+	main.cpp:	This source file contains the driver for the user to select which of the available 17 homework exercises to execute
 				(excluding 0-0 and excluding 5-2 BONUS and 7-1 BONUS, which are called automatically with 5-2 and 7-1 respectively). */
 
 #include <iostream>         // for cout & cin in main()

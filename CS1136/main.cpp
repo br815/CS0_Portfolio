@@ -1,6 +1,7 @@
 /*	Author:		Bushra Rahman
 	Course:		CS 1136 (Spring 2019)
-	main.cpp:	This source file contains the driver for the user to select which of the available 20 labs (excluding 1-1) they wish to execute. */
+	main.cpp:	This source file contains the driver for the user to select which of the available 20 lab exercises to execute
+				(excluding 1-1). */
 
 #include <iostream>         // for cout & cin in main()
 #include <string>		    // for strings in main()
