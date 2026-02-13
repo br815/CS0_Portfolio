@@ -16,7 +16,7 @@ g++ main.cpp lab_exercises.cpp
 <!-- CODE END -->
 
 ## Header File
-* [lab_exercises.h](/CS1136/lab_exercises.h): contains 21 function declarations
+* [lab_exercises.h](/CS1136/lab_exercises.h): contains 21 function prototypes
   * 1-1, 1-2
   * 2-1, 2-2, 2-3
   * 3-1, 3-2

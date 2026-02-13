@@ -27,7 +27,7 @@ g++ main.cpp hw_exercises.cpp
 * [HW 9: Arrays](/CS1336/Instructions/HW9_Arrays.pdf)
 
 ## Header File
-* [hw_exercises.h](/CS1336/hw_exercises.h): contains 20 function declarations
+* [hw_exercises.h](/CS1336/hw_exercises.h): contains 20 function prototypes
   * 0-0
   * 1-1, 1-2
   * 2-1, 2-2

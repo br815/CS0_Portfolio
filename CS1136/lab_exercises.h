@@ -1,12 +1,12 @@
 /*	Author:		    	Bushra Rahman
 	Course:		    	CS 1136 (Spring 2019)
-	lab_exercises.h:	This header file contains the function declarations for all 21 total functions in lab_exercises.cpp. */
+	lab_exercises.h:	This header file contains the function prototypes for all 21 total functions in lab_exercises.cpp. */
 
 // header for #include guard (preprocessor directives)
 #ifndef LAB_EXERCISES_H		// if LAB_EXERCISES_H is not defined, define it (start of header guard)
 #define LAB_EXERCISES_H		// define LAB_EXERCISES_H to prevent multiple inclusions
 
-// function declarations
+// function prototypes
 void lab1ex1(); void lab1ex2();
 void lab2ex1(); void lab2ex2(); void lab2ex3();
 void lab3ex1(); void lab3ex2();

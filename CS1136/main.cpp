@@ -8,7 +8,7 @@
 #include <vector>		    // for vector<> in main()
 #include <utility>		    // for pair<> in main()
 #include <limits>			// for numeric_limits for cin.ignore() in main()
-#include "lab_exercises.h"	// header file containing all 21 lab exercise function declarations
+#include "lab_exercises.h"	// header file containing all 21 lab exercise function prototypes
 using namespace std;
 
 

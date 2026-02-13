@@ -8,7 +8,7 @@
 #include <vector>		    // for vector<> in main()
 #include <utility>		    // for pair<> in main()
 #include <limits>			// for numeric_limits for cin.ignore() in main()
-#include "hw_exercises.h"	// header file containing all 20 homework exercise function declarations
+#include "hw_exercises.h"	// header file containing all 20 homework exercise function prototypes
 using namespace std;
 
 
