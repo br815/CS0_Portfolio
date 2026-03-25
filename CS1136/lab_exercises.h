@@ -4,7 +4,7 @@
 
 // header for #include guard (preprocessor directives)
 #ifndef LAB_EXERCISES_H		// if LAB_EXERCISES_H is not defined, define it (start of header guard)
-#define LAB_EXERCISES_H		// define LAB_EXERCISES_H to prevent multiple inclusions
+#define LAB_EXERCISES_H		// define LAB_EXERCISES_H once to prevent multiple inclusions
 
 // function prototypes
 void lab1ex1(); void lab1ex2();

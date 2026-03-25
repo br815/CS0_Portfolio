@@ -4,7 +4,7 @@
 
 // header for #include guard (preprocessor directives)
 #ifndef HW_EXERCISES_H		// if HW_EXERCISES_H is not defined, define it (start of header guard)
-#define HW_EXERCISES_H		// define HW_EXERCISES_H to prevent multiple inclusions
+#define HW_EXERCISES_H		// define HW_EXERCISES_H once to prevent multiple inclusions
 
 // function prototypes
 void hw0ex0();
