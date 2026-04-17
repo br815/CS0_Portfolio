@@ -1033,7 +1033,7 @@ void hw8ex1() {
 						It uses loops to test the division of this number against every value less than its square root.
 		   				If the number divides perfectly by any of these values, then its primeness is set to false.
 						This label of its primeness or non-primeness is what is returned in the form of a boolean.
-	Input:    			int number
+	Param:    			int number
 						Any number whose primeness is being tested.
 	Return:				bool isPrime
 						The true/false designation of the number as prime or not. */
@@ -1072,7 +1072,7 @@ bool hw8ex1_isPrime(int number) {
 						by setting testForPrime to false.
            				In addition, newlines are printed for every 10th value of primeCounter, 
 						and also printed once the end has been reached (once testPrime is false).
-	Input:    			int number, ofstream & outputFile
+	Param:    			int number, ofstream & outputFile
         				The user-inputted number of primes to print, 
 						and the output file that will be directly changed by printing that.
 						(Therefore it is passed by reference.)
@@ -1154,7 +1154,7 @@ void hw8ex2() {
 	Descr:				This function prompts the user for a score between 0 and 100.
 						It then uses an input-validation loop to make sure that 5 integers
 						meeting these conditions are supplied.
-	Input:				int & score
+	Param:				int & score
 						Receives a single user-inputted score and stores it in int score.
            				(Therefore it is passed by reference.)
 	Return:   			None. */
@@ -1172,7 +1172,7 @@ void hw8ex2_getScore(int & score) {
 	Descr:				This function compares all the numbers in the argument to determine which of them
 						is the smallest/minimum of the total 5.
 						It achieves this through the use of multiple if-blocks in succession.
-	Input:				int n1, int n2, int n3, int n4, int n5
+	Param:				int n1, int n2, int n3, int n4, int n5
 						Five numbers/scores gotten through calling getInput 5 times in the driver function.
 	Return:				int min
 						The minimum number among the 5 scores. */
@@ -1206,7 +1206,7 @@ int hw8ex2_findLowest(int n1, int n2, int n3, int n4, int n5) {
 	Descr:				This function calculates the average of the 4 remaining scores
 						after having called hw8ex2_findLowest() to identify the lowest of the 5.
 						It then prints a report of the score that was dropped and the final average.
-	Input:				int n1, int n2, int n3, int n4, int n5
+	Param:				int n1, int n2, int n3, int n4, int n5
 						Five numbers/scores gotten through calling getInput 5 times in the driver function.
 	Return:				None. */
 void hw8ex2_calcAverage(int n1, int n2, int n3, int n4, int n5) {
@@ -1251,7 +1251,7 @@ void hw9ex1() {
 	Descr:				This function reads the contents of an input file, and reads that data into the array. 
 		   				It uses a counter currentElem and a while loop to achieve this.
 						It then returns currentElem (the number of elements actually passed into the array).
-	Input:				int stdList[], int maxElems, string inputFileName
+	Param:				int stdList[], int maxElems, string inputFileName
 						An array of numbers, the maximum size for that array, and and input file containing those numbers.
 	Return:				int currentElem
            				The number of elements, which will be -1 if the read was unsuccessful. */
@@ -1291,7 +1291,7 @@ int hw9ex1_readArray(int stdList[], int maxElems, string inputFileName) {
 						the index at which the value was found.
 						If the value was not found at all, this starting index is reset to 0, 
 						allowing the loop to restart from the beginning of the array.
-	Input:				int stdList[], int numElems, int value
+	Param:				int stdList[], int numElems, int value
 						The array being searched through, the number of elements in it, and the value being searched for.
 	Return:				int matchIndex
 						The index at which the value was found. */
@@ -1324,7 +1324,7 @@ int hw9ex1_searchList(int stdList[], int numElems, int value) {
 	Descr:				This function searches for the LSTest values within the LSStandard array.
 						If a match has been found, hw9ex1_searchList() is called again to determine 
 						if the value is located anywhere else in LSStandard after the index where it was found.
-	Input:				int LSStandard[], int standardElems, int LSTest[], int testElems
+	Param:				int LSStandard[], int standardElems, int LSTest[], int testElems
 						The array being searched through, the number of elements in it, 
 						the array of values to search for, the number of elements in it.
 	Return:				None. */
@@ -1415,7 +1415,7 @@ void hw9ex2() {
 	Descr:				This function reads the contents of an input file, and reads that data into the array. 
 						It uses a counter numElems and a while-loop to achieve this.
 						It then returns numElems (the number of elements actually passed into the array).
-	Input:				char response[], int maxArraySize, string inputFileName
+	Param:				char response[], int maxArraySize, string inputFileName
 						An array of any set of responses, the maximum size for that array, 
 						and and input file containing those responses.
 	Return:				int numElems
@@ -1458,7 +1458,7 @@ int hw9ex2_readArray(char response[], int maxArraySize, string inputFileName) {
 						their grades, and the list of questions they answered incorrectly, 
 						accompanied by their own incorrect responses alongside the correct response. 
 		   				Once all the students' reports have been outputted, the highest and lowest grades among them are found.
-	Input:				char studentResponses[], int studentArraySize, char correctResponses[], int correctArraySize
+	Param:				char studentResponses[], int studentArraySize, char correctResponses[], int correctArraySize
         				Array of students' answers, its size, array of correct answers, its size.
 	Return:				None. */
 void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char correctResponses[], int correctArraySize) {
@@ -1571,7 +1571,7 @@ void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char c
 	Descr:				This function loops through the argument array to find the smallest value it contains.
 						Since it needs to yield both the smallest value and the index of this value, 
 						the former is the function's return value and the latter is passed by reference.
-	Input:				double values[], int numValues, int & indexForMin
+	Param:				double values[], int numValues, int & indexForMin
 						Array of values, number of values in that array, and the index of the array's smallest value
                         (which is passed by reference so it can be used outside this function).
 	Return:				double min
@@ -1594,7 +1594,7 @@ double hw9ex2_smallestValue(double values[], int numValues, int & indexForMin) {
 	Descr:				This function loops through the argument array to find the largest value it contains.
 						Since it needs to yield both the largest value and the index of this value, 
 						the former is the function's return value and the latter is passed by reference.
-	Input:				double values[], int numValues, int & indexForMax
+	Param:				double values[], int numValues, int & indexForMax
 						Array of values, number of values in that array, and the index of the array's largest value
 						(which is passed by reference so it can be used outside this function).
 	Return:   			double max

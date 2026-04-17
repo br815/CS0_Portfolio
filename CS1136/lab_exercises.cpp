@@ -735,7 +735,7 @@ void lab8ex1() {
 /*	Helper Function:	lab8ex1_readSeconds()
 	Descr:				This function reads in the double value for the amount of seconds the object falls for.
 						The function displays a prompt, reads in the seconds, and notifies the user if the input is invalid.
-	Input:				None.
+	Param:				None.
 	Return:				double seconds
 						The first value that is read in. */
 double lab8ex1_readSeconds() {
@@ -753,7 +753,7 @@ double lab8ex1_readSeconds() {
 /*	Helper Function:	lab8ex1_calculateDistance()
 	Descr:				This function calculates the distance that is travelled by the object using the general formula
 						d = 0.5 * g * pow(t, 2).
-	Input:				double seconds
+	Param:				double seconds
 						The user-inputted time value.
 	Return:				double distance
 						The distance fallen, the result of the function's calculations. */
@@ -767,7 +767,7 @@ double lab8ex1_calculateDistance(double seconds) {
 /*	Helper Function:	lab8ex1_displayResults()
 	Descr:    			This function displays the values that have thus far been used in the assignment:
 						the distance travelled, which was calculated; and the seconds travelled for, which was user-inputted.
-	Input:				double seconds, double distance
+	Param:				double seconds, double distance
 						The user-inputted time value, and the calculated distance value.
 	Return:				None. */
 void lab8ex1_displayResults(double seconds, double distance) {
@@ -795,7 +795,7 @@ void lab8ex2() {
 /*	Helper Function:	lab8ex2_readFutureValue()
 	Descr:				This function reads in the double value for the user's desired future amount in their bank account.
 						The function displays a prompt, reads in the future value, and then validates the input with a while-loop.
-	Input:				None.
+	Param:				None.
 	Return:				double futureValue
 						The first valid future value that is read in. */
 double lab8ex2_readFutureValue() {
@@ -816,7 +816,7 @@ double lab8ex2_readFutureValue() {
 	Descr:				This function reads in the annual rate of interest for the user's bank account.
 						The function displays a prompt, reads in the interest rate, and then validates the input with a while-loop.
 	           			This inputted rate is considered a percentage, and is converted to a decimal in the return statement.
-	Input:				None.
+	Param:				None.
 	Return:				double (interestRate / 100.0)
 						The first valid future interest rate that is read in, divided by 100
 						to convert it to a decimal for further calculations in a later function. */
@@ -838,7 +838,7 @@ double lab8ex2_readAnnualRate() {
 	Descr:				This function reads in the number of years the user will leave their present deposit in their bank account
 						to accumulate interest. The function displays a prompt, reads in the number of years, and then
 						validates the input with a while-loop.
-	Input:				None.
+	Param:				None.
 	Return:				int numYears
 						The first valid number of years that is read in. */
 int lab8ex2_readYears() {
@@ -858,7 +858,7 @@ int lab8ex2_readYears() {
 /*	Helper Function:	lab8ex2_calculatePresentValue()
 	Descr:    			This function uses the general formula "P = F / ((1 + r)^n)" to  calculate the present value,
 						the amount that must presently be deposited in the user's account.
-	Input:    			double futureValue, double interestRate, int numberYears
+	Param:    			double futureValue, double interestRate, int numberYears
 						The future value, interest rate, and number of years that were previously read in by the last 3 functions.
 	Return:				double presentValue
 						The present value, the result of the function's calculations. */
@@ -874,7 +874,7 @@ double lab8ex2_calculatePresentValue(double futureValue, double interestRate, in
 						2) the future/desired value,
 						3) the annual interest rate (in its percentage form), and
 						4) number of years, which were all read in.
-	Input:				double presentValue, double futureValue, double interestRate, int numberYears
+	Param:				double presentValue, double futureValue, double interestRate, int numberYears
 						The calculated present value, and the three values used to calculate it.
 	Return:				None. */
 void lab8ex2_displayResults(double presentValue, double futureValue, double interestRate, int numberYears) {
@@ -911,7 +911,7 @@ void lab9ex1() {
 						or "no" to in order to keep the default charge.
 						The parameters of this function are passed by reference, so that the inputted values
 						can be directly transferred into the arguments in the driver function.
-	Input:				int & intSpoolsOrdered, int & intSpoolsInStock, double & shippingAndHandlingCharges
+	Param:				int & intSpoolsOrdered, int & intSpoolsInStock, double & shippingAndHandlingCharges
 						Number of spools ordered, number of them in stock, and the shipping/handling fee.
 						(All passed by reference)
 	Return:				None. */
@@ -957,7 +957,7 @@ void lab9ex1_getInputs(int & intSpoolsOrdered, int & intSpoolsInStock, double & 
 						3) the subtotal for the spools ready to ship,
 						4) the shipping and handling fee, and
 						5) the total cost of the order ready to ship.
-	Input:				int intSpoolsOrdered, int intSpoolsInStock, double shippingAndHandlingCharges
+	Param:				int intSpoolsOrdered, int intSpoolsInStock, double shippingAndHandlingCharges
 						Number of spools ordered, number of them in stock, and the shipping/handling fee.
 						(No longer passed by reference, but by value)
 	Return:				None. */
@@ -1065,7 +1065,7 @@ void lab9ex2() {
 						It runs a series of checks to determine whether the return value of the function should be
 						0 (the end of the input file has been reached), 1 (the values read in are all valid),
 						or 2 (one or more of the values read in is invalid).
-	Input:				ifstream & inputFile, double & presentValue, double & monthlyInterestRate, int & numMonths
+	Param:				ifstream & inputFile, double & presentValue, double & monthlyInterestRate, int & numMonths
 						The user's input file, and the 3 variables read in from that file that will be used to
 						calculate the future value of the investment in a separate function.
 						(All passed by reference)
@@ -1112,7 +1112,7 @@ unsigned int lab9ex2_getInput(ifstream & inputFile, double & presentValue, doubl
 /*	Helper Function:	lab9ex2_calculateFutureValue()
 	Descr:				This function computes compounded interest by month using the formula F = P * pow((1 + i),t).
 						This value is stored in a variable as the future value of the investment.
-	Input:				double presentValue, double interestRate, int months
+	Param:				double presentValue, double interestRate, int months
 						The three variables read previously, used to calculate the future value of the investment in this function.
 	Return:				double futureValue
 						The value that was calculated. */
@@ -1127,7 +1127,7 @@ double lab9ex2_calculateFutureValue(double presentValue, double interestRate, in
 						The headers print only once, but then each iteration of the while-loop in the driver function
 						will continue to use this function to print output to the output file,
 						as long as there continue to be valid input values to be processed from the input file.
-	Input:				ofstream & outputFile, double & futureValue, double & presentValue, double & monthlyInterestRate, int & numMonths, bool & writeHeader
+	Param:				ofstream & outputFile, double & futureValue, double & presentValue, double & monthlyInterestRate, int & numMonths, bool & writeHeader
 						The output file; the 3 values used to calculate the future value, along with the future value itself;
 						and the boolean control variable that allows the headers to print only once into the output file.
 						(All passed by reference)
@@ -1188,7 +1188,7 @@ void lab10ex1() {
 						It uses a counter i and a while-loop to achieve this.
 						It then returns a true or false depending on whether the file was opened successfully
 						and the read was successful too.
-	Input:				char response[lab10ex1_ARRAY_SIZE], string inputFileName
+	Param:				char response[lab10ex1_ARRAY_SIZE], string inputFileName
 						An array of any set of responses, and and input file containing those responses.
 	Return:				bool true or false
 						Indicates if the read from the input file to the array was successful or not. */
@@ -1233,7 +1233,7 @@ bool lab10ex1_readArray(char response[lab10ex1_ARRAY_SIZE], string inputFileName
 						thus keeping score of how many questions the student missed.
 						Every incorrect question is outputted with the student's answer alongside the correct answer.
 						Afterwards, the student's grade is calculated, and a test determines whether their grade is a pass or fail.           
-	Input:				char studentResponses[lab10ex1_ARRAY_SIZE], char correctResponses[lab10ex1_ARRAY_SIZE]
+	Param:				char studentResponses[lab10ex1_ARRAY_SIZE], char correctResponses[lab10ex1_ARRAY_SIZE]
 						An array of student responses, and an array of the correct answers.
 	Return:   			None. */
 void lab10ex1_displayResults(char studentResponses[lab10ex1_ARRAY_SIZE], char correctResponses[lab10ex1_ARRAY_SIZE]) {
@@ -1312,7 +1312,7 @@ void lab10ex2() {
 /*	Helper Function:	lab10ex2_readFile()
 	Descr:				This function reads the contents of an input file, and reads that data into a 2D array.
 						The doubles in the file are read as strings and converted to doubles in the array.
-	Input:				double grades[][lab10ex2_MAX_COLUMNS], int maxRowsToRead, string inputFileName
+	Param:				double grades[][lab10ex2_MAX_COLUMNS], int maxRowsToRead, string inputFileName
 						A 2D array of grades, the maximum number of rows for the 2D array, and and input file containing the grades.
 	Return:				int currentRow
 						The number rows read into the 2D array. */
@@ -1388,7 +1388,7 @@ int lab10ex2_readFile(double grades[][lab10ex2_MAX_COLUMNS], int maxRowsToRead, 
 /*	Helper Function:	lab10ex2_average()
 	Descr:				This function adds up all the values in the 2D argument array and divides the sum by the number of values,
 						thus calculating the average.
-	Input:				double values[][lab10ex2_MAX_COLUMNS], int numberRows
+	Param:				double values[][lab10ex2_MAX_COLUMNS], int numberRows
 						A 2D array of grades and the number of rows in that array.
 	Return:				double avg
 						The average of all the numbers in the array. */
@@ -1416,7 +1416,7 @@ double lab10ex2_average(double values[][lab10ex2_MAX_COLUMNS], int numberRows) {
 	Descr:				This function adds up all the values in a column of the 2D array,
 						then divides by the number of elements in the column,
 						thus calculating the average for the given column.
-	Input:				double values[][lab10ex2_MAX_COLUMNS], int column, int numberRows
+	Param:				double values[][lab10ex2_MAX_COLUMNS], int column, int numberRows
 						A 2D array of grades, the index of the column, and the number of rows in the array.
 	Return:				double avg
 						The average of all the numbers in a column. */
@@ -1438,7 +1438,7 @@ double lab10ex2_columnAverage(double values[][lab10ex2_MAX_COLUMNS], int column,
 }
 /*	Helper Function:	lab10ex2_smallestValue()
 	Descr:				This function determines the smallest value in a given row of the 2D array.
-	Input:				double values[][lab10ex2_MAX_COLUMNS], int currentRow
+	Param:				double values[][lab10ex2_MAX_COLUMNS], int currentRow
 						A 2D array of grades and the row whose minimum is being determined.
 	Return:				double min
 						The smallest value in a given row. */
