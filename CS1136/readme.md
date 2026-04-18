@@ -24,7 +24,7 @@ g++ main.cpp lab_exercises.cpp -o ../build/labs
 ../build/labs
 ```
 <!-- CODE END -->
-This compilation instruction is intended to produce an executable in a `build` folder (by using the `-o` flag and providing the relative file path `../build/labs`). A `build` folder must be created first if it does not exist (using `mkdir`).
+This compilation instruction is intended to produce an executable in a `build` folder (by using the `-o` flag and providing the relative file path `../build/labs`). A `build` folder must first be created in `CS1136` if it does not exist (using `mkdir`).
 
 The executable can be named anything (eg. `a.exe`), but a descriptive name like `labs.exe` (or just `labs`) is preferred.
 
