@@ -15,8 +15,7 @@ g++ main.cpp lab_exercises.cpp
 <!-- CODE END -->
 This compilation instruction produces an executable directly in the `src` folder.
 
-## Execution Instructions (Alternate)
-Open terminal while in `CS0_Portfolio` and run:
+Alternatively, run:
 <!-- CODE START -->
 ```
 cd CS1136/src
