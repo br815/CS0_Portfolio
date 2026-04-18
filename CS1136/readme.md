@@ -2,21 +2,28 @@
 
 # CS0 Laboratory Portfolio - Bushra Rahman
 ## CS 1136 (Programming Fundamentals Laboratory) - UTD Spring 2019
-
 These labs assignments were done through [zyBooks](https://www.zybooks.com/).
 
 ## Execution Instructions
-Open terminal and run:
+Open terminal while in `CS0_Portfolio` and run:
 <!-- CODE START -->
 ```
-cd CS1136
-g++ main.cpp lab_exercises.cpp
-.\a.exe
+cd CS1136/src
+g++ main.cpp lab_exercises.cpp -o ../build/labs
+../build/labs
 ```
 <!-- CODE END -->
+This compilation instruction is intended to produce an executable in the `build` folder (by using the `-o` flag and providing the relative file path `../build/labs`).
 
-## Header File
-* [lab_exercises.h](/CS1136/lab_exercises.h): contains 21 function prototypes
+The executable can be named anything (eg. `a.exe`), but `labs.exe` (or just `labs`) is a clearer name.
+
+Compilation and execution can be done either...
+* ...with or without providing the `.exe` extention (the code block above does it without)
+* ...with a forward slash `/` or backslash `\` (the code block above does it with `/`)
+
+## src Folder
+### Header File
+* [lab_exercises.h](/CS1136/lab_exercises.h): contains 21 lab function prototypes
   * 1-1, 1-2
   * 2-1, 2-2, 2-3
   * 3-1, 3-2
@@ -28,22 +35,23 @@ g++ main.cpp lab_exercises.cpp
   * 9-1, 9-2
   * 10-1, 10-2
 
-## Source Files
-* [main.cpp](/CS1136/main.cpp): main file containing program driver
-* [lab_exercises.cpp](/CS1136/lab_exercises.cpp): implementation file containing 21 function bodies
+### Source Files
+* [main.cpp](/CS1136/main.cpp): program driver containing main()
+* [lab_exercises.cpp](/CS1136/lab_exercises.cpp): implementation of 21 homework functions and 19 helper functions
 
-## Input Files & Output Files by Lab Exercise
+## data Folder
+Input files need to be provided using their relative path (ie. with the prefix `../data/`). Output files are also created using the same prefix.
 * Lab 7-1:
-  * [lab7ex1_sales.txt](/CS1136/lab7ex1_sales.txt): input file
-  * [lab7ex1_saleschart.txt](/CS1136/lab7ex1_saleschart.txt): output file
+  * [lab7ex1_sales.txt](/CS1136/data/lab7ex1_sales.txt): input file
+  * [lab7ex1_saleschart.txt](/CS1136/data/lab7ex1_saleschart.txt): output file
 * Lab 7-2:
-  * [lab7ex2_avg.txt](/CS1136/lab7ex2_avg.txt): input file
-  * [lab7ex2_invalids.txt](/CS1136/lab7ex2_invalids.txt): output file
+  * [lab7ex2_avg.txt](/CS1136/data/lab7ex2_avg.txt): input file
+  * [lab7ex2_invalids.txt](/CS1136/data/lab7ex2_invalids.txt): output file
 * Lab 9-2:
-  * [lab9ex2_data.txt](/CS1136/lab9ex2_data.txt): input file
-  * [lab9ex2_output.xls](/CS1136/lab9ex2_output.xls): output file
+  * [lab9ex2_data.txt](/CS1136/data/lab9ex2_data.txt): input file
+  * [lab9ex2_output.xls](/CS1136/data/lab9ex2_output.xls): output file
 * Lab 10-1:
-  * [lab10ex1_student.txt](/CS1136/lab10ex1_student.txt): input file
-  * [lab10ex1_answers.txt](/CS1136/lab10ex1_answers.txt): input file
+  * [lab10ex1_student.txt](/CS1136/data/lab10ex1_student.txt): input file
+  * [lab10ex1_answers.txt](/CS1136/data/lab10ex1_answers.txt): input file
 * Lab 10-2:
-  * [lab10ex2_grades.txt](/CS1136/lab10ex2_grades.txt): input file
+  * [lab10ex2_grades.txt](/CS1136/data/lab10ex2_grades.txt): input file

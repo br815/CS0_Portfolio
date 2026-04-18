@@ -14,7 +14,8 @@ using namespace std;
 
 
 // Global struct to contain a hw exercise's nums as well as its function ptr.
-struct HWExercise {
+struct HWExercise
+{
     /*	Use ints for a hw exercise's nums (not strings b/c it's more intuitive to contain numeric variables in ints;
 		string conversion methods (stoi) can be used later in main() if needed). */
 	int homeworkNum;
@@ -27,7 +28,8 @@ struct HWExercise {
     void (*fp)();
 };
 // Global array of HWExercise structs.
-HWExercise HWExercises[17] = {
+HWExercise HWExercises[17] =
+{
 	{1, 1, hw1ex1},	{1, 2, hw1ex2},	// hw1ex1 here is NOT a string, it's the ADDRESS to the hw1ex1() function (located in hw_exercises.cpp)
 	{2, 1, hw2ex1},	{2, 2, hw2ex2},	
 	{3, 1, hw3ex1},	{3, 2, hw3ex2},	
@@ -42,7 +44,8 @@ HWExercise HWExercises[17] = {
 
 
 // main(): Driver for running homework exercises chosen by the user.
-int main() {	
+int main()
+{	
 	// First, print HWExercises[17] in a 4x5 box for user to view.
 	int numHws = sizeof(HWExercises) / sizeof(HWExercises[0]);	// # of elements = total bytes divided by bytes of 1 element
 	int linePrinter = 0;

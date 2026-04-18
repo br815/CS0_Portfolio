@@ -14,7 +14,8 @@ using namespace std;
 
 
 // Global struct to contain a lab exercise's nums as well as its function ptr.
-struct LabExercise {
+struct LabExercise
+{
     /*	Use ints for a lab exercise's nums (not strings b/c it's more intuitive to contain numeric variables in ints;
 		string conversion methods (stoi) can be used later in main() if needed). */
 	int laboratoryNum;
@@ -27,23 +28,25 @@ struct LabExercise {
     void (*fp)();
 };
 // Global array of LabExercise structs.
-LabExercise LabExercises[20] = {
-    {1, 2, lab1ex2},	// lab1ex2 here is NOT a string, it's the ADDRESS to the lab1ex2() function (located in lab_exercises.cpp)
-    {2, 1, lab2ex1},	{2, 2, lab2ex2},	{2, 3, lab2ex3},
-    {3, 1, lab3ex1},	{3, 2, lab3ex2},
-    {4, 1, lab4ex1},	{4, 2, lab4ex2},
+LabExercise LabExercises[20] =
+{
+	{1, 2, lab1ex2},	// lab1ex2 here is NOT a string, it's the ADDRESS to the lab1ex2() function (located in lab_exercises.cpp)
+	{2, 1, lab2ex1},	{2, 2, lab2ex2},	{2, 3, lab2ex3},
+	{3, 1, lab3ex1},	{3, 2, lab3ex2},
+	{4, 1, lab4ex1},	{4, 2, lab4ex2},
 	{5, 1, lab5ex1},	{5, 2, lab5ex2},
 	{6, 1, lab6ex1},	{6, 2, lab6ex2},
 	{7, 1, lab7ex1},	{7, 2, lab7ex2},
 	{8, 1, lab8ex1},	{8, 2, lab8ex2},
 	{9, 1, lab9ex1},	{9, 2, lab9ex2},
-    {10, 1, lab10ex1},	{10, 2, lab10ex2}
+	{10, 1, lab10ex1},	{10, 2, lab10ex2}
 };
 
 
 
 // main(): Driver for running lab exercises chosen by the user.
-int main() {	
+int main()
+{	
 	// First, print LabExercises[20] in a 4x5 box for user to view.
 	int numLabs = sizeof(LabExercises) / sizeof(LabExercises[0]);	// # of elements = total bytes divided by bytes of 1 element
 	int linePrinter = 0;

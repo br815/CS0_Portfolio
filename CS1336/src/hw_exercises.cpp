@@ -15,38 +15,39 @@ using namespace std;
 
 
 
-// function prototypes for HW #8 Exercise #1
+// 2 helper function prototypes for HW #8 Exercise #1
 bool hw8ex1_isPrime(int number);
 void hw8ex1_displayOutput(int number, ofstream & outputFile);
 
-// function prototypes for HW #8 Exercise #2
+// 3 helper function prototypes for HW #8 Exercise #2
 void hw8ex2_getScore(int & score);
 int hw8ex2_findLowest(int n1, int n2, int n3, int n4, int n5);
 void hw8ex2_calcAverage(int n1, int n2, int n3, int n4, int n5);
 
-// function prototypes for HW #9 Exercise #1
-int hw9ex1_readArray(int stdList[], int numElems, string inputFileName);
-int hw9ex1_searchList(int stdList[], int numElems, int value);
-void hw9ex1_searchManager(int stdList[], int numElems, int testList[], int testElems);
 // global constants indicating array sizes for HW #9 Exercise #1
 const int hw9ex1_STANDARD_SIZE = 100;
 const int hw9ex1_TEST_SIZE = 50;
+// 3 helper function prototypes for HW #9 Exercise #1
+int hw9ex1_readArray(int stdList[], int numElems, string inputFileName);
+int hw9ex1_searchList(int stdList[], int numElems, int value);
+void hw9ex1_searchManager(int stdList[], int numElems, int testList[], int testElems);
 
-// function prototypes for HW #9 Exercise #2
-int hw9ex2_readArray(char response[], int maxArraySize, string inputFileName);
-void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char correctResponses[], int correctArraySize);
-double hw9ex2_smallestValue(double values[], int numValues, int & indexForMin);
-double hw9ex2_largestValue(double values[], int numValues, int & indexForMax);
 // global constants indicating array sizes for HW #9 Exercise #2
 const int hw9ex2_STUDENT_RESP_ARRAY_SIZE = 300;
 const int hw9ex2_CORRECT_RESP_ARRAY_SIZE = 20;
 const int hw9ex2_MAX_NUMBER_OF_STUDENTS = hw9ex2_STUDENT_RESP_ARRAY_SIZE / hw9ex2_CORRECT_RESP_ARRAY_SIZE;
+// 4 helper function prototypes for HW #9 Exercise #2
+int hw9ex2_readArray(char response[], int maxArraySize, string inputFileName);
+void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char correctResponses[], int correctArraySize);
+double hw9ex2_smallestValue(double values[], int numValues, int & indexForMin);
+double hw9ex2_largestValue(double values[], int numValues, int & indexForMax);
 
 
 
 /*	HW #0 Exercise #0 (Date): 
 	This assignment is a skeleton function. */
-void hw0ex0() {
+void hw0ex0()
+{
 	cout << "This is HW #0 Exercise #0, a skeleton function." << endl;
 }
 
@@ -54,7 +55,8 @@ void hw0ex0() {
 
 /*	HW #1 Exercise #1 (2/4/2019): 
 	This assignment prints various strings to the output console. */
-void hw1ex1() {
+void hw1ex1()
+{
 
     // "Hello World!" (using an endl to put a carriage return at the end of the line)
 	cout << "Hello world!" << endl;
@@ -83,7 +85,8 @@ void hw1ex1() {
 
 /*	HW #1 Exercise #2 (2/4/2019): 
 	This assignment is derived from pseudocode to calculate the distance traveled under acceleration 'a' and time 't'. */
-void hw1ex2() {
+void hw1ex2()
+{
 
 	float timeVal;          // value of time 't'
     float acceleration;     // value of acceleration 'a'
@@ -103,7 +106,8 @@ void hw1ex2() {
 /*	HW #2 Exercise #1 (2/12/2019): 
 	This assignment calculates the number of gallons of gas required for a car that can go
 	23.5 mi/gal in-town and 28.9 mi/gal on highways. */
-void hw2ex1() {
+void hw2ex1()
+{
 	cout << fixed << setprecision(1);
 
 	double inTownMiles;		// number of miles driven in-town
@@ -125,7 +129,8 @@ void hw2ex1() {
 
 /*	HW #2 Exercise #2 (2/12/2019): 
 	This assignment converts inputted temperatures between Fahrenheit, Celsius, and Kelvin. */
-void hw2ex2() {
+void hw2ex2()
+{
 	cout << fixed << setprecision(2);
 
 	double celsDegrees;		// temperaure in Celsius (degrees)
@@ -171,7 +176,8 @@ void hw2ex2() {
 /*	HW #3 Exercise #1 (2/21/2019): 
 	This assignment computes the average amount of rainfall for three inputted months (Part A).
 	It then prints the number of characters used to spell each of the inputted months (Part B). */
-void hw3ex1() {
+void hw3ex1()
+{
 	cout << fixed << setprecision(2);
 
 	// Part A: Calculating the average of three user-inputted amounts of rainfall
@@ -226,7 +232,8 @@ void hw3ex1() {
 
 /*	HW #3 Exercise #2 (2/21/2019): 
 	This assignment calculates the amount of money paid each month to pay off a mortgage loan. */
-void hw3ex2() {
+void hw3ex2()
+{
 	cout << fixed << setprecision(2);
 
 	double loanAmt;			// the amount of the loan
@@ -260,7 +267,8 @@ void hw3ex2() {
 
 /*	HW #4 Exercise #1 (2/25/2019): 
 	This assignment calculates the balance in a savings account after a year. */
-void hw4ex1() {
+void hw4ex1()
+{
 	cout << fixed << setprecision(2);
 
 	double principalAmt;	// the principal amount deposited to the account
@@ -290,7 +298,8 @@ void hw4ex1() {
 
 /*	HW #5 Exercise #1 (3/12/2019): 
 	This assignment reads in a number of seconds and converts it to minutes, hours, or days (or leaves it as seconds). */
-void hw5ex1() {
+void hw5ex1()
+{
 	cout << fixed << setprecision(2);
 
 	double numSeconds;		// user-inputted number of seconds
@@ -320,7 +329,8 @@ void hw5ex1() {
 
 /*	HW #5 Exercise #2 (3/12/2019): 
 	This assignment calculates the user's monthly phone bill based on a selected package. */
-void hw5ex2() {
+void hw5ex2()
+{
 	cout << fixed << setprecision(2);
 
 	char packageName;				// user-inputted, package name (can be A, a, B, b, C, or c)
@@ -386,7 +396,8 @@ void hw5ex2() {
 /*	HW #5 Exercise #2 BONUS (3/12/2019): 
 	This assignment calculates the user's monthly phone bill based on a selected package.
    	It then provides the user some feedback regarding the efficiency of the package they chose. */
-void hw5ex2_BONUS() {
+void hw5ex2_BONUS()
+{
 	cout << fixed << setprecision(2);
 
 	char packageName;				// user-inputted, package name (can be A, a, B, b, C, or c)
@@ -494,7 +505,8 @@ void hw5ex2_BONUS() {
 
 /*	HW #6 Exercise #1 (4/9/2019): 
 	This program executes a variety of loops whose purposes are commented below. */
-void hw6ex1() {
+void hw6ex1()
+{
 	// Loop A: prints out the even integers between 2 and 100, using a for-loop
 	cout << "The even integers between 2 and 100:" << endl;
 	int i = 0;	// the counter that controls line breaks in the following loops
@@ -588,7 +600,8 @@ void hw6ex1() {
 /*	HW #6 Exercise #2 (4/9/2019): 
 	This program gets five stores' sales for the day from the user.
 	It then uses asterisks to display a bar chart measuring the five sales amounts. */
-void hw6ex2() {
+void hw6ex2()
+{
 	int sales1;	// today's sales for store 1
 	cout << "Enter today's sales for store 1: ";
 	cin >> sales1;
@@ -701,7 +714,8 @@ void hw6ex2() {
 
 /*	HW #7 Exercise #1 (4/15/2019): 
 	This assignment prints 4 geometric patterns using a user-inputted integer from the range [1,15]. */
-void hw7ex1() {
+void hw7ex1()
+{
 	int val;	// user-inputted value
 	cout << "Please enter an integer between 1 and 15: ";
 	cin >> val;
@@ -828,7 +842,8 @@ void hw7ex1() {
 
 /*	HW #7 Exercise #1 BONUS (4/15/2019): 
 	This assignment prints an hourglass triangle. */
-void hw7ex1_BONUS() {
+void hw7ex1_BONUS()
+{
 	int val;	// user-inputted odd value
 	cout << "Please enter an odd integer between 1 and 15: ";
 	cin >> val;
@@ -923,11 +938,12 @@ void hw7ex1_BONUS() {
 /*	HW #7 Exercise #2 (4/15/2019): 
 	This assignment reads in a list of random numbers from an input file and calculates a set of statistics on those numbers.
     It then prints out a report of those statistics. */
-void hw7ex2() {
+void hw7ex2()
+{
 	// creates an input file for the input file
 	ifstream inputFile;
-	// the input files provided are hw7ex2_NumListLong.txt or hw7ex2_NumListShort.txt
-	string inputFileName = "hw7ex2_NumListLong.txt";
+	// the input files provided are ../data/hw7ex2_NumListLong.txt or ../data/hw7ex2_NumListShort.txt
+	string inputFileName = "../data/hw7ex2_NumListLong.txt";
 
 	int val;			// current value being processed from the input file
 	
@@ -996,7 +1012,8 @@ void hw7ex2() {
 	This assignment uses 2 helper functions (with prototypes) in addition to its driver function.
 	The assignment prints out the set of the first 'n' prime numbers, wherein 'n' is a user-inputted number from 1-100.
     This set is printed to both the output console as well as an output file. */
-void hw8ex1() {
+void hw8ex1()
+{
 	// This driver function body was formerly contained within main() of hw8ex1's own source file.
 
 	// create the user-inputted number, and get its value from the user
@@ -1013,7 +1030,7 @@ void hw8ex1() {
 
 	// create the output file, name it, and open it
 	ofstream outputFile;
-	string outputFileName = "hw8ex1_PrimeOut.txt";
+	string outputFileName = "../data/hw8ex1_PrimeOut.txt";
 	outputFile.open(outputFileName);
 
 	// the output file was opened successfully
@@ -1037,7 +1054,8 @@ void hw8ex1() {
 						Any number whose primeness is being tested.
 	Return:				bool isPrime
 						The true/false designation of the number as prime or not. */
-bool hw8ex1_isPrime(int number) {
+bool hw8ex1_isPrime(int number)
+{
 	bool isPrime = true;
 
 	// 1 is not considered a prime nor composite number
@@ -1077,7 +1095,8 @@ bool hw8ex1_isPrime(int number) {
 						and the output file that will be directly changed by printing that.
 						(Therefore it is passed by reference.)
 	Return:   			None. */
-void hw8ex1_displayOutput(int number, ofstream & outputFile) {
+void hw8ex1_displayOutput(int number, ofstream & outputFile)
+{
 	bool testForPrime = true;	// boolean control to keep calling isPrime
 	int testNum = 0;			// any number being tested for primeness
 	int primeCounter = 0;		// the number of prime numbers found and printed
@@ -1132,7 +1151,8 @@ void hw8ex1_displayOutput(int number, ofstream & outputFile) {
 	This assignment uses 3 helper functions (with prototypes) in addition to its driver function.
 	The assignment receives 5 scores from the user, find the lowest of those scores,
     and calculate the average after having dropped that lowest score. */
-void hw8ex2() {
+void hw8ex2()
+{
 	// This driver function body was formerly contained within main() of hw8ex2's own source file.
 
 	// create and receive 5 scores from the user using hw8ex2_getScore()
@@ -1158,7 +1178,8 @@ void hw8ex2() {
 						Receives a single user-inputted score and stores it in int score.
            				(Therefore it is passed by reference.)
 	Return:   			None. */
-void hw8ex2_getScore(int & score) {
+void hw8ex2_getScore(int & score)
+{
 	cout << "Enter a score between 0 and 100: ";
 	cin >> score;
 
@@ -1176,7 +1197,8 @@ void hw8ex2_getScore(int & score) {
 						Five numbers/scores gotten through calling getInput 5 times in the driver function.
 	Return:				int min
 						The minimum number among the 5 scores. */
-int hw8ex2_findLowest(int n1, int n2, int n3, int n4, int n5) {
+int hw8ex2_findLowest(int n1, int n2, int n3, int n4, int n5)
+{
 	// create the minimum and initialize it to a number too big to be the lowest score
 	int min = 101;
 	if (n1 < min)
@@ -1209,7 +1231,8 @@ int hw8ex2_findLowest(int n1, int n2, int n3, int n4, int n5) {
 	Param:				int n1, int n2, int n3, int n4, int n5
 						Five numbers/scores gotten through calling getInput 5 times in the driver function.
 	Return:				None. */
-void hw8ex2_calcAverage(int n1, int n2, int n3, int n4, int n5) {
+void hw8ex2_calcAverage(int n1, int n2, int n3, int n4, int n5)
+{
 	// call hw8ex2_findLowest() to determine which score is the minimum
 	int minimum = hw8ex2_findLowest(n1, n2, n3, n4, n5);
 
@@ -1227,14 +1250,15 @@ void hw8ex2_calcAverage(int n1, int n2, int n3, int n4, int n5) {
 	This assignment uses 3 helper functions (with prototypes) in addition to its driver function. Additionally, 2 global constants are used.
 	The assignment transfers the contents of 2 .txt input files, a standard one and a test one, into arrays.
    	It then uses a linear search function to search for the LSTest values within the LSStandard array. */
-void hw9ex1() {
+void hw9ex1()
+{
 	// This driver function body was formerly contained within main() of hw9ex1's own source file.
 
 	// name standard input file
-	string inputFileStandardName = "hw9ex1_LSStandard.txt";
+	string inputFileStandardName = "../data/hw9ex1_LSStandard.txt";
 
 	// name test input file
-	string inputFileTestName = "hw9ex1_LSTest.txt";
+	string inputFileTestName = "../data/hw9ex1_LSTest.txt";
 
 	// create arrays for both input files
 	int LSStandard[hw9ex1_STANDARD_SIZE];
@@ -1255,7 +1279,8 @@ void hw9ex1() {
 						An array of numbers, the maximum size for that array, and and input file containing those numbers.
 	Return:				int currentElem
            				The number of elements, which will be -1 if the read was unsuccessful. */
-int hw9ex1_readArray(int stdList[], int maxElems, string inputFileName) {
+int hw9ex1_readArray(int stdList[], int maxElems, string inputFileName)
+{
 	// creates the input file and opens it
 	ifstream inputFile;
 	inputFile.open(inputFileName);
@@ -1295,7 +1320,8 @@ int hw9ex1_readArray(int stdList[], int maxElems, string inputFileName) {
 						The array being searched through, the number of elements in it, and the value being searched for.
 	Return:				int matchIndex
 						The index at which the value was found. */
-int hw9ex1_searchList(int stdList[], int numElems, int value) {
+int hw9ex1_searchList(int stdList[], int numElems, int value)
+{
 	// index to start searching at
 	static int startIndex = 0;
 
@@ -1330,47 +1356,47 @@ int hw9ex1_searchList(int stdList[], int numElems, int value) {
 	Return:				None. */
 void hw9ex1_searchManager(int LSStandard[], int standardElems, int LSTest[], int testElems)
 {
-   int value = 0;			// search value
-   int matchIndex = -1;		// index where the value was found
-   int numberOfMatches = 0;	// number of matches for the given value
+	int value = 0;				// search value
+	int matchIndex = -1;		// index where the value was found
+	int numberOfMatches = 0;	// number of matches for the given value
 
-   for (int i = 0; i < testElems; i++)
-   {
-      // call the linear search on every value at i
-      value = LSTest[i];
-      matchIndex = hw9ex1_searchList(LSStandard, standardElems, value);
-      numberOfMatches = 0;
+	for (int i = 0; i < testElems; i++)
+	{
+		// call the linear search on every value at i
+		value = LSTest[i];
+		matchIndex = hw9ex1_searchList(LSStandard, standardElems, value);
+		numberOfMatches = 0;
 
-      // the test value was not found in the standard array
-      if (matchIndex == -1)
-      {
-         cout << "Number " << (i + 1) << " (" << setw(3) << value << ") was not located in the file." << endl;
-      }
-      // the test value was found in the standard array
-      else
-      {
-         cout << "Number " << (i + 1) << " (" << setw(3) << value << ") was located at index(es)";
-         
-         numberOfMatches = 1;				// one match has been found at this point
+		// the test value was not found in the standard array
+		if (matchIndex == -1)
+		{
+			cout << "Number " << (i + 1) << " (" << setw(3) << value << ") was not located in the file." << endl;
+		}
+		// the test value was found in the standard array
+		else
+		{
+			cout << "Number " << (i + 1) << " (" << setw(3) << value << ") was located at index(es)";
 
-         while (matchIndex > -1)
-         {
-            if (numberOfMatches == 1)
-            {
-               cout << " " << matchIndex;	// for the first match, don't print a comma before it
-            }
-            else
-            {
-               cout << ", " << matchIndex;	// print every subsequent match with a comma before it
-            }
+			numberOfMatches = 1;				// one match has been found at this point
 
-            // call the linear search from the following index, and increment the number of matches found
-            matchIndex = hw9ex1_searchList(LSStandard, standardElems, value);
-            numberOfMatches++;
-         }
-         cout << "." << endl;
-      }
-   }
+			while (matchIndex > -1)
+			{
+				if (numberOfMatches == 1)
+				{
+					cout << " " << matchIndex;	// for the first match, don't print a comma before it
+				}
+				else
+				{
+					cout << ", " << matchIndex;	// print every subsequent match with a comma before it
+				}
+
+				// call the linear search from the following index, and increment the number of matches found
+				matchIndex = hw9ex1_searchList(LSStandard, standardElems, value);
+				numberOfMatches++;
+			}
+			cout << "." << endl;
+		}
+	}
 }
 
 
@@ -1379,7 +1405,8 @@ void hw9ex1_searchManager(int LSStandard[], int standardElems, int LSTest[], int
 	This assignment uses 4 helper functions (with prototypes) in addition to its driver function. Additionally, 3 global constants are used.
 	The assignment compares an array of the correct answers for an exam to an array of multiple students' answers.
 	It then displays reports for each student's grade and the lowest/highest scorers on the exam. */
-void hw9ex2() {
+void hw9ex2()
+{
 	// This driver function body was formerly contained within main() of hw9ex2's own source file.
 
 	// create arrays for both the student's answers and the correct answers
@@ -1389,7 +1416,7 @@ void hw9ex2() {
 	// input a file name
 	string inputFileName;
 	cout << "Please enter the name of the input file containing all students' answers: ";
-	// the input files provided are hw9ex2_StudentsListLong.txt or hw9ex2_StudentsListShort.txt
+	// the input files provided are ../data/hw9ex2_StudentsListLong.txt or ../data/hw9ex2_StudentsListShort.txt
 	cin >> inputFileName;
 
 	// call hw9ex2_readArray() on the students' answers
@@ -1401,7 +1428,7 @@ void hw9ex2() {
 	{
 		// input the file with the correct answers
 		cout << "Please enter the name of the input file containing the correct answers: ";
-		cin >> inputFileName;	// the input file provided is hw9ex2_CorrectList.txt
+		cin >> inputFileName;	// the input file provided is ../data/hw9ex2_CorrectList.txt
 		correctResponseCount = hw9ex2_readArray(correctResponses, hw9ex2_CORRECT_RESP_ARRAY_SIZE, inputFileName);
 	}
 
@@ -1420,7 +1447,8 @@ void hw9ex2() {
 						and and input file containing those responses.
 	Return:				int numElems
 						The number of elements, which will be -1 if the read was unsuccessful. */
-int hw9ex2_readArray(char response[], int maxArraySize, string inputFileName) {
+int hw9ex2_readArray(char response[], int maxArraySize, string inputFileName)
+{
 	// creates the input file and opens it
 	ifstream inputFile;
 	inputFile.open(inputFileName);
@@ -1461,7 +1489,8 @@ int hw9ex2_readArray(char response[], int maxArraySize, string inputFileName) {
 	Param:				char studentResponses[], int studentArraySize, char correctResponses[], int correctArraySize
         				Array of students' answers, its size, array of correct answers, its size.
 	Return:				None. */
-void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char correctResponses[], int correctArraySize) {
+void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char correctResponses[], int correctArraySize)
+{
 	int numStudents = studentArraySize / correctArraySize;	// the number of students in the student array
 	double studentGrade = -1.0;								// the grade for each student
 	int incorrectCounter = 0;								// accumulator for a student's incorrect answers
@@ -1474,7 +1503,7 @@ void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char c
 
 	// create an output file, name it, and open it
 	ofstream outputFile;
-	outputFile.open("hw9ex2_ExamAnalysis.txt");
+	outputFile.open("../data/hw9ex2_ExamAnalysis.txt");
 
 	// looping through each student in the array of students' answers
 	for (int currentStudent = 0; currentStudent < numStudents; currentStudent++)
@@ -1576,7 +1605,8 @@ void hw9ex2_displayResults(char studentResponses[], int studentArraySize, char c
                         (which is passed by reference so it can be used outside this function).
 	Return:				double min
 						The smallest value in the array. */
-double hw9ex2_smallestValue(double values[], int numValues, int & indexForMin) {
+double hw9ex2_smallestValue(double values[], int numValues, int & indexForMin)
+{
 	double min = values[0];
 	indexForMin = 0;
 
@@ -1599,7 +1629,8 @@ double hw9ex2_smallestValue(double values[], int numValues, int & indexForMin) {
 						(which is passed by reference so it can be used outside this function).
 	Return:   			double max
            				The largest value in the array. */
-double hw9ex2_largestValue(double values[], int numValues, int & indexForMax) {
+double hw9ex2_largestValue(double values[], int numValues, int & indexForMax)
+{
 	double max = values[0];
 	indexForMax = 0;
 

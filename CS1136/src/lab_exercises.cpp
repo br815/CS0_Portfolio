@@ -15,39 +15,39 @@ using namespace std;
 
 
 
-// function prototypes for Lab #8 Exercise #1
+// 3 helper function prototypes for Lab #8 Exercise #1
 double lab8ex1_readSeconds();
 double lab8ex1_calculateDistance(double seconds);
 void lab8ex1_displayResults(double seconds, double distance);
 
-// function prototypes for Lab #8 Exercise #2
+// 5 helper function prototypes for Lab #8 Exercise #2
 double lab8ex2_readFutureValue();
 double lab8ex2_readAnnualRate();
 int lab8ex2_readYears();
 double lab8ex2_calculatePresentValue(double futureValue, double interestRate, int numberYears);
 void lab8ex2_displayResults(double presentValue, double futureValue, double interestRate, int numberYears);
 
-// function prototypes for Lab #9 Exercise #1
-void lab9ex1_getInputs(int & intSpoolsOrdered, int & intSpoolsInStock, double & shippingAndHandlingCharges);
-void lab9ex1_displayOutput(int intSpoolsOrdered, int intSpoolsInStock, double shippingAndHandlingCharges);
 // global constant indicating the price of each spool for Lab #9 Exercise #1
 const double lab9ex1_DBL_SPOOL_PRICE = 100.00;
+// 2 helper function prototypes for Lab #9 Exercise #1
+void lab9ex1_getInputs(int & intSpoolsOrdered, int & intSpoolsInStock, double & shippingAndHandlingCharges);
+void lab9ex1_displayOutput(int intSpoolsOrdered, int intSpoolsInStock, double shippingAndHandlingCharges);
 
-// function prototypes for Lab #9 Exercise #2
+// 3 helper function prototypes for Lab #9 Exercise #2
 unsigned int lab9ex2_getInput(ifstream & inputFile, double & presentValue, double & monthlyInterestRate, int & numMonths);
 double lab9ex2_calculateFutureValue(double presentValue, double interestRate, int months);
 void lab9ex2_writeOutput(ofstream & outputFile, double & futureValue, double & presentValue, double & monthlyInterestRate, int & numMonths, bool & writeHeader);
 
 // global constant indicating the number of questions in any set of responses for Lab #10 Exercise #1
 const int lab10ex1_ARRAY_SIZE = 20;
-// function prototypes for Lab #10 Exercise #1
+// 2 helper function prototypes for Lab #10 Exercise #1
 bool lab10ex1_readArray(char response[lab10ex1_ARRAY_SIZE], string inputFileName);
 void lab10ex1_displayResults(char studentResponses[lab10ex1_ARRAY_SIZE], char correctResponses[lab10ex1_ARRAY_SIZE]);
 
 // global constants indicating maximum 2D array dimensions for Lab #10 Exercise #2
 const int lab10ex2_MAX_ROWS = 20;
 const int lab10ex2_MAX_COLUMNS = 5;
-// function prototypes for Lab #10 Exercise #2
+// 4 helper function prototypes for Lab #10 Exercise #2
 int lab10ex2_readFile(double grades[][lab10ex2_MAX_COLUMNS], int maxRowsToRead, string inputFileName);
 double lab10ex2_average(double values[][lab10ex2_MAX_COLUMNS], int numberRows);
 double lab10ex2_columnAverage(double values[][lab10ex2_MAX_COLUMNS], int column, int numberRows);
@@ -57,7 +57,8 @@ double lab10ex2_smallestValue(double values[][lab10ex2_MAX_COLUMNS], int current
 
 /*	Lab #1 Exercise #1 (Date): 
 	This assignment is a skeleton function. */
-void lab1ex1() {
+void lab1ex1()
+{
 	cout << "This is Lab #1 Exercise #1, a skeleton function." << endl;
 }
 
@@ -74,7 +75,8 @@ void lab1ex1() {
     └── Input withdrawals
     └── Store the value of balance plus deposits minus withdrawals in variable endingBalance
     └── Display "The ending balance is " endingBalance */
-void lab1ex2() {
+void lab1ex2()
+{
 
     double balance, deposits, withdrawals, endingBalance;
 
@@ -102,7 +104,8 @@ void lab1ex2() {
 /*	Lab #2 Exercise #1 (2/10/2019): 
 	This assignment computes the total sales tax on a $95 purchase, 
 	wherein the state sales tax is 6% and the county sales tax is 2%. */
-void lab2ex1() {
+void lab2ex1()
+{
 	double purchasePrice = 95;		// cost of the purchase, $95
 	double stateSalesTax = 0.06;	// state sales tax of 6%
 	double countySalesTax = 0.02;	// county sales tax of 2%
@@ -119,7 +122,8 @@ void lab2ex1() {
 
 /*	Lab #2 Exercise #2 (2/10/2019): 
 	This assignment calculates the rise in ocean levels over 5, 10, and 50 years. */
-void lab2ex2() {
+void lab2ex2()
+{
 	cout << "Please enter the rise in ocean levels per year in millimeters: ";
 	double risingLevel;							// rise in ocean levels (per year) in millimeters
 	cin >> risingLevel;							// read in the estimated rising ocean level
@@ -140,7 +144,8 @@ void lab2ex2() {
 /*	Lab #2 Exercise #3 (2/10/2019): 
 	This assignment consists of a number of cout statements to output two shapes: 
 	a rectangle (10x10) and a triangle (with a base of 11 characters). */
-void lab2ex3() {
+void lab2ex3()
+{
 	
 	cout << "  SQUARE   " << endl;
 	cout << "@@@@@@@@@@" << endl;
@@ -167,7 +172,8 @@ void lab2ex3() {
 
 /*	Lab #3 Exercise #1 (2/17/2019): 
 	This assignment calculates the average of five inputted test scores. */
-void lab3ex1() {
+void lab3ex1()
+{
 	cout << fixed << setprecision(1);
 
 	double score1, score2, score3, score4, score5;   // each variable holds the respective test score
@@ -189,7 +195,8 @@ void lab3ex1() {
 
 /*	Lab #3 Exercise #2 (2/17/2019): 
 	This assignment converts an inputted amount in US dollars to yen, euros, and pesos. */
-void lab3ex2() {
+void lab3ex2()
+{
 	cout << fixed << setprecision(2);
 
 	cout << "Please enter an amount of money in US dollars: ";
@@ -218,7 +225,8 @@ void lab3ex2() {
 /*	Lab #4 Exercise #1 (2/24/2019): 
 	This assignment reads in the mass of an object (in kg) 
 	and outputs the weight (in N) on the Earth, on the Moon, and on Venus. */
-void lab4ex1() {
+void lab4ex1()
+{
 	cout << fixed << setprecision(4);
 
 	double objMass;			// object's mass in kilograms
@@ -267,7 +275,8 @@ void lab4ex1() {
 /*	Lab #4 Exercise #2 (3/3/2019): 
 	This assignment reads in a number of seconds and converts it 
 	to days, hours, minutes, and remaining seconds, depending on the amount. */
-void lab4ex2() {
+void lab4ex2()
+{
 	cout << fixed << setprecision(4);
 
 	long long int numSeconds;
@@ -314,7 +323,8 @@ void lab4ex2() {
 /*	Lab #5 Exercise #1 (3/25/2019): 
 	This assignment calculates the number of seconds it will take for sound to travel though a medium. 
 	The structure used is a switch menu. */
-void lab5ex1() {
+void lab5ex1()
+{
 	unsigned int medium;	// holds the value 1, 2, or 3, corresponding to the user's choice
 	double distance;		// the distance value inputted by the user
 	double seconds;			// the seconds taken by the sound to travel through the medium; seconds = distance/a constant
@@ -375,7 +385,8 @@ void lab5ex1() {
 /*	Lab #5 Exercise #2 (3/25/2019): 
 	This assignment calculates the speed that sound takes to travel through gases at 0 degrees centigrade. 
 	The structure used is an if-else if-else block. */
-void lab5ex2() {
+void lab5ex2()
+{
 	unsigned int medium;	// holds the value 1, 2, 3, or 4, corresponding to the user's choice
 	double seconds;			// the seconds value inputted by the user
 	double distance;		// the distance the sound travels through the medium in the given seconds; distance = seconds * a constant
@@ -455,7 +466,8 @@ void lab5ex2() {
 /*	Lab #6 Exercise #1 (3/31/2019): 
 	This assignment outputs the characters that map to the ASCII codes 32 through 126.
 	A loop is used to iterate through the input values and output the corresponding character. */
-void lab6ex1() {
+void lab6ex1()
+{
 	unsigned int lowerVal;    // the lower-limit numeric value, inputted by the user
 	unsigned int upperVal;    // the upper-limit numeric value, inputted by the user
 
@@ -500,7 +512,8 @@ void lab6ex1() {
 
 /*	Lab #6 Exercise #2 (3/31/2019): 
 	This assignment converts a set of temperatures from Fahrenheit to Celsius. */
-void lab6ex2() {
+void lab6ex2()
+{
 	cout << fixed << setprecision(5);
 	
 	cout << "Please enter a starting Fahrenheit temperature, an ending Fahrenheit temperature, and an increment value:" << endl;
@@ -539,12 +552,13 @@ void lab6ex2() {
 /*	Lab #7 Exercise #1 (4/7/2019): 
 	This assignment reads sales information from a file
 	and writes out a bar chart for each of the stores. */
-void lab7ex1() {
+void lab7ex1()
+{
 	// creates an input file and gets its name from the user
 	ifstream inputFile;
 	string inputFileName;
 	cout << "Please enter the name of the sales information input file: ";
-	cin >> inputFileName;			// the input file provided is lab7ex1_sales.txt
+	cin >> inputFileName;			// the input file provided is ../data/lab7ex1_sales.txt
 
 	inputFile.open(inputFileName);
 
@@ -559,7 +573,7 @@ void lab7ex1() {
 	if (inputFile)
 	{
 		ofstream outputFile;
-		outputFile.open("lab7ex1_saleschart.txt");
+		outputFile.open("../data/lab7ex1_saleschart.txt");
 
 		// the output file opened successfully 
 		if (outputFile)
@@ -621,12 +635,13 @@ void lab7ex1() {
 	This assignment reads numbers from a file.
 	It validates the numbers and calculates the average of all of the valid numbers.
 	Additionally, it writes invalid values to another file. */
-void lab7ex2() {
+void lab7ex2()
+{
 	// create the input file and get its name from the user
 	ifstream inputFile;
 	string inputFileName;
 	cout << "Please enter the name of the input file containing values to be averaged: ";
-	cin >> inputFileName;			// the input file provided is lab7ex2_avg.txt
+	cin >> inputFileName;			// the input file provided is ../data/lab7ex2_avg.txt
 
 	inputFile.open(inputFileName);
 
@@ -641,7 +656,7 @@ void lab7ex2() {
 	{
 		// creates the output file for invalid values
 		ofstream outputFile;
-		outputFile.open("lab7ex2_invalids.txt");
+		outputFile.open("../data/lab7ex2_invalids.txt");
 
 		cout << "Reading from file \"" << inputFileName << "\"" << endl;
 
@@ -701,7 +716,8 @@ void lab7ex2() {
 	The 1st function reads in the amount of time in seconds from the user,
 	the 2nd function calculates the distance fallen by an object in those seconds,
 	and the 3rd function displays those results. */
-void lab8ex1() {
+void lab8ex1()
+{
 	// This driver function body was formerly contained within main() of lab8ex1's own source file.
 	
 	double seconds = -1;	/*	user-inputted seconds, initialized to negative so that it will
@@ -738,7 +754,8 @@ void lab8ex1() {
 	Param:				None.
 	Return:				double seconds
 						The first value that is read in. */
-double lab8ex1_readSeconds() {
+double lab8ex1_readSeconds()
+{
 	double seconds;
 	cout << "Please enter the time (in seconds), or enter 0 or any non-number character(s) to exit:" << endl;
 	cin >> seconds;
@@ -757,7 +774,8 @@ double lab8ex1_readSeconds() {
 						The user-inputted time value.
 	Return:				double distance
 						The distance fallen, the result of the function's calculations. */
-double lab8ex1_calculateDistance(double seconds) {
+double lab8ex1_calculateDistance(double seconds)
+{
 	double distance = 0;
 	const double gravity = 9.8;
 	distance = 0.5 * gravity * pow(seconds, 2);
@@ -770,7 +788,8 @@ double lab8ex1_calculateDistance(double seconds) {
 	Param:				double seconds, double distance
 						The user-inputted time value, and the calculated distance value.
 	Return:				None. */
-void lab8ex1_displayResults(double seconds, double distance) {
+void lab8ex1_displayResults(double seconds, double distance)
+{
 	cout << "The object traveled " << fixed << setprecision(3) << distance << " meters in " << fixed << setprecision(2) << seconds << " seconds." << endl;
 }
 
@@ -782,7 +801,8 @@ void lab8ex1_displayResults(double seconds, double distance) {
 	their account's annual interest rate, and the amount of years they'll wait.
 	The following function calculates the amount that must be deposited now,
 	and the last function displays these results. */
-void lab8ex2() {
+void lab8ex2()
+{
 	// This driver function body was formerly contained within main() of lab8ex2's own source file.
 
 	double futureValue = lab8ex2_readFutureValue();
@@ -798,7 +818,8 @@ void lab8ex2() {
 	Param:				None.
 	Return:				double futureValue
 						The first valid future value that is read in. */
-double lab8ex2_readFutureValue() {
+double lab8ex2_readFutureValue()
+{
 	double futureValue = -1;
 	cout << "Please enter the desired future value for your bank account:" << endl;
 	cin >> futureValue;
@@ -820,7 +841,8 @@ double lab8ex2_readFutureValue() {
 	Return:				double (interestRate / 100.0)
 						The first valid future interest rate that is read in, divided by 100
 						to convert it to a decimal for further calculations in a later function. */
-double lab8ex2_readAnnualRate() {
+double lab8ex2_readAnnualRate()
+{
 	double interestRate = -1;
 	cout << "Please enter the annual interest rate:" << endl;
 	cin >> interestRate;
@@ -841,7 +863,8 @@ double lab8ex2_readAnnualRate() {
 	Param:				None.
 	Return:				int numYears
 						The first valid number of years that is read in. */
-int lab8ex2_readYears() {
+int lab8ex2_readYears()
+{
 	int numYears = -1;
 	cout << "Please enter number of years to accumulate interest:" << endl;
 	cin >> numYears;
@@ -862,7 +885,8 @@ int lab8ex2_readYears() {
 						The future value, interest rate, and number of years that were previously read in by the last 3 functions.
 	Return:				double presentValue
 						The present value, the result of the function's calculations. */
-double lab8ex2_calculatePresentValue(double futureValue, double interestRate, int numberYears) {
+double lab8ex2_calculatePresentValue(double futureValue, double interestRate, int numberYears)
+{
 	double presentValue = 0;
 	presentValue = futureValue / (pow(1 + interestRate, numberYears));
 
@@ -877,7 +901,8 @@ double lab8ex2_calculatePresentValue(double futureValue, double interestRate, in
 	Param:				double presentValue, double futureValue, double interestRate, int numberYears
 						The calculated present value, and the three values used to calculate it.
 	Return:				None. */
-void lab8ex2_displayResults(double presentValue, double futureValue, double interestRate, int numberYears) {
+void lab8ex2_displayResults(double presentValue, double futureValue, double interestRate, int numberYears)
+{
 	cout << fixed << setprecision(2);
 	cout << "Present value: $" << presentValue << endl;
 	cout << "Future value: $" << futureValue << endl;
@@ -891,7 +916,8 @@ void lab8ex2_displayResults(double presentValue, double futureValue, double inte
 	This assignment uses 2 helper functions (with prototypes) in addition to its driver function.
 	The 1st one receives the user's input, and the 2nd one displays the output. Additionally, a global constant is used.
 	The assignment displays the status of an order for a company sells spools of copper wiring for $100 each. */
-void lab9ex1() {
+void lab9ex1()
+{
 	// This driver function body was formerly contained within main() of lab9ex1's own source file.
 
 	// all int variables are initialized to invalid values
@@ -915,7 +941,8 @@ void lab9ex1() {
 						Number of spools ordered, number of them in stock, and the shipping/handling fee.
 						(All passed by reference)
 	Return:				None. */
-void lab9ex1_getInputs(int & intSpoolsOrdered, int & intSpoolsInStock, double & shippingAndHandlingCharges) {
+void lab9ex1_getInputs(int & intSpoolsOrdered, int & intSpoolsInStock, double & shippingAndHandlingCharges)
+{
 	cout << "Please enter the number of spools to be ordered:" << endl;
 	cin >> intSpoolsOrdered;
 	while (intSpoolsOrdered < 1)
@@ -961,7 +988,8 @@ void lab9ex1_getInputs(int & intSpoolsOrdered, int & intSpoolsInStock, double & 
 						Number of spools ordered, number of them in stock, and the shipping/handling fee.
 						(No longer passed by reference, but by value)
 	Return:				None. */
-void lab9ex1_displayOutput(int intSpoolsOrdered, int intSpoolsInStock, double shippingAndHandlingCharges) {
+void lab9ex1_displayOutput(int intSpoolsOrdered, int intSpoolsInStock, double shippingAndHandlingCharges)
+{
 	// all int variables are initialized to invalid values
 	int intSpoolsReady = -1;		// the number of spools ready to ship
 	int intSpoolsBackorder = 0;		// the number of spools in back-order (if any)
@@ -997,14 +1025,15 @@ void lab9ex1_displayOutput(int intSpoolsOrdered, int intSpoolsInStock, double sh
 	(the present value, monthly interest rate, and the number of months for the investment) from an input file.
 	The 2nd function computes compounded interest by month using the formula F = P * pow((1 + i),t).
 	The 3rd function writes a report of these values into a .xls output file. */
-void lab9ex2() {
+void lab9ex2()
+{
 	// This driver function body was formerly contained within main() of lab9ex2's own source file.
 	
 	// creates an input file, gets its name from the user, and opens it
 	ifstream inputFile;
 	string inputFileName;
 	cout << "Please enter the name of the input file containing your bank account investment data: ";
-	cin >> inputFileName;		// the input file provided is lab9ex2_data.txt
+	cin >> inputFileName;		// the input file provided is ../data/lab9ex2_data.txt
 	inputFile.open(inputFileName);
 
 	bool writeHeader = true;	// the control variable for lab9ex2_writeOutput() to write headers to the output file only once
@@ -1014,7 +1043,7 @@ void lab9ex2() {
 	{
 		// creates an output file, names it, and opens it
 		ofstream outputFile;
-		outputFile.open("lab9ex2_output.xls");
+		outputFile.open("../data/lab9ex2_output.xls");
 
 		// the output file opened successfully 
 		if (outputFile)
@@ -1071,7 +1100,8 @@ void lab9ex2() {
 						(All passed by reference)
 	Return:				unsigned int returnValue
 						A variable containing either 0, 1, or 2. */
-unsigned int lab9ex2_getInput(ifstream & inputFile, double & presentValue, double & monthlyInterestRate, int & numMonths) {
+unsigned int lab9ex2_getInput(ifstream & inputFile, double & presentValue, double & monthlyInterestRate, int & numMonths)
+{
 	// initially sets the function's return value to 2, indicating that none of them are valid
 	unsigned int returnValue = 2;
 
@@ -1116,7 +1146,8 @@ unsigned int lab9ex2_getInput(ifstream & inputFile, double & presentValue, doubl
 						The three variables read previously, used to calculate the future value of the investment in this function.
 	Return:				double futureValue
 						The value that was calculated. */
-double lab9ex2_calculateFutureValue(double presentValue, double interestRate, int months) {
+double lab9ex2_calculateFutureValue(double presentValue, double interestRate, int months)
+{
 	double futureValue = -1;	// initially sets the future value to an invalid amount
 	futureValue = presentValue * pow((1 + interestRate), months);
 
@@ -1132,7 +1163,8 @@ double lab9ex2_calculateFutureValue(double presentValue, double interestRate, in
 						and the boolean control variable that allows the headers to print only once into the output file.
 						(All passed by reference)
 	Return:				None. */
-void lab9ex2_writeOutput(ofstream & outputFile, double & futureValue, double & presentValue, double & monthlyInterestRate, int & numMonths, bool & writeHeader) {
+void lab9ex2_writeOutput(ofstream & outputFile, double & futureValue, double & presentValue, double & monthlyInterestRate, int & numMonths, bool & writeHeader)
+{
 	if (writeHeader)
 	{
 		outputFile << "Future Value\tPresent Value\tMonthly Interest\tMonths" << endl;
@@ -1152,13 +1184,14 @@ void lab9ex2_writeOutput(ofstream & outputFile, double & futureValue, double & p
 /*	Lab #10 Exercise #1 (4/20/2019): 
 	This assignment uses 2 helper functions (with prototypes) in addition to its driver function. Additionally, a global constant is used.
 	The assignment compares an array of quiz answers to an array of student answers and outputs the student's results. */
-void lab10ex1() {
+void lab10ex1()
+{
 	// This driver function body was formerly contained within main() of lab10ex1's own source file.
 
 	// input the file with the student's answers
 	string inputFileName;
 	cout << "Please enter the name of the input file containing the student's answers: ";
-	cin >> inputFileName;	// the input file provided is lab10ex1_student.txt
+	cin >> inputFileName;	// the input file provided is ../data/lab10ex1_student.txt
 
 	// create arrays for both the student's answers and the correct answers
 	char studentResponses[lab10ex1_ARRAY_SIZE];
@@ -1173,7 +1206,7 @@ void lab10ex1() {
 	{
 		// input the file with the correct answers
 		cout << "Please enter the name of the input file containing the correct answers: ";
-		cin >> inputFileName;	// the input file provided is lab10ex1_answers.txt
+		cin >> inputFileName;	// the input file provided is ../data/lab10ex1_answers.txt
 		correctReadStatus = lab10ex1_readArray(correctResponses, inputFileName);
 	}
 	
@@ -1192,7 +1225,8 @@ void lab10ex1() {
 						An array of any set of responses, and and input file containing those responses.
 	Return:				bool true or false
 						Indicates if the read from the input file to the array was successful or not. */
-bool lab10ex1_readArray(char response[lab10ex1_ARRAY_SIZE], string inputFileName) {
+bool lab10ex1_readArray(char response[lab10ex1_ARRAY_SIZE], string inputFileName)
+{
 	// creates the input file and opens it
 	ifstream inputFile;
 	inputFile.open(inputFileName);
@@ -1236,7 +1270,8 @@ bool lab10ex1_readArray(char response[lab10ex1_ARRAY_SIZE], string inputFileName
 	Param:				char studentResponses[lab10ex1_ARRAY_SIZE], char correctResponses[lab10ex1_ARRAY_SIZE]
 						An array of student responses, and an array of the correct answers.
 	Return:   			None. */
-void lab10ex1_displayResults(char studentResponses[lab10ex1_ARRAY_SIZE], char correctResponses[lab10ex1_ARRAY_SIZE]) {
+void lab10ex1_displayResults(char studentResponses[lab10ex1_ARRAY_SIZE], char correctResponses[lab10ex1_ARRAY_SIZE])
+{
 	// accumulator for incorrect answers
 	int incorrectCounter = 0;
 
@@ -1269,13 +1304,14 @@ void lab10ex1_displayResults(char studentResponses[lab10ex1_ARRAY_SIZE], char co
 /*	Lab #10 Exercise #2 (4/20/2019):
 	This assignment uses 4 helper functions (with prototypes) in addition to its driver function. Additionally, 2 global constants are used.
 	The assignment reads the contents of a file into an array and calculates various values based on the contents of the file. */
-void lab10ex2() {
+void lab10ex2()
+{
 	// This driver function body was formerly contained within main() of lab10ex2's own source file.
 
 	// input a file name
 	string inputFileName;
 	cout << "Please enter the name of the input file containing grades: ";
-	cin >> inputFileName;	// the input file provided is lab10ex2_grades.txt
+	cin >> inputFileName;	// the input file provided is ../data/lab10ex2_grades.txt
 
 	// array of grades
 	double grades[lab10ex2_MAX_ROWS][lab10ex2_MAX_COLUMNS];
@@ -1316,7 +1352,8 @@ void lab10ex2() {
 						A 2D array of grades, the maximum number of rows for the 2D array, and and input file containing the grades.
 	Return:				int currentRow
 						The number rows read into the 2D array. */
-int lab10ex2_readFile(double grades[][lab10ex2_MAX_COLUMNS], int maxRowsToRead, string inputFileName) {
+int lab10ex2_readFile(double grades[][lab10ex2_MAX_COLUMNS], int maxRowsToRead, string inputFileName)
+{
 	// creates an input file and opens it
 	ifstream inputFile;
 	inputFile.open(inputFileName);
@@ -1392,7 +1429,8 @@ int lab10ex2_readFile(double grades[][lab10ex2_MAX_COLUMNS], int maxRowsToRead, 
 						A 2D array of grades and the number of rows in that array.
 	Return:				double avg
 						The average of all the numbers in the array. */
-double lab10ex2_average(double values[][lab10ex2_MAX_COLUMNS], int numberRows) {
+double lab10ex2_average(double values[][lab10ex2_MAX_COLUMNS], int numberRows)
+{
 	cout << "Processing " << numberRows << " rows, and " << lab10ex2_MAX_COLUMNS << " columns" << endl;
 
 	double sum = 0.0;
@@ -1420,7 +1458,8 @@ double lab10ex2_average(double values[][lab10ex2_MAX_COLUMNS], int numberRows) {
 						A 2D array of grades, the index of the column, and the number of rows in the array.
 	Return:				double avg
 						The average of all the numbers in a column. */
-double lab10ex2_columnAverage(double values[][lab10ex2_MAX_COLUMNS], int column, int numberRows) {
+double lab10ex2_columnAverage(double values[][lab10ex2_MAX_COLUMNS], int column, int numberRows)
+{
 	double sum = 0.0;
 	int numElems = 0;
 	double avg = -1.0;
@@ -1442,7 +1481,8 @@ double lab10ex2_columnAverage(double values[][lab10ex2_MAX_COLUMNS], int column,
 						A 2D array of grades and the row whose minimum is being determined.
 	Return:				double min
 						The smallest value in a given row. */
-double lab10ex2_smallestValue(double values[][lab10ex2_MAX_COLUMNS], int currentRow) {
+double lab10ex2_smallestValue(double values[][lab10ex2_MAX_COLUMNS], int currentRow)
+{
 	double min = values[currentRow][0];
 
 	for (int col = 1; col < lab10ex2_MAX_COLUMNS; col++)
