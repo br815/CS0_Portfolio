@@ -4,7 +4,18 @@
 ## CS 1136 (Programming Fundamentals Laboratory) - UTD Spring 2019
 These labs assignments were done through [zyBooks](https://www.zybooks.com/).
 
-## Execution Instructions
+## Execution Instructions (Simple)
+Open terminal while in `CS0_Portfolio` and run:
+<!-- CODE START -->
+```
+cd CS1136/src
+g++ main.cpp lab_exercises.cpp
+./a.exe
+```
+<!-- CODE END -->
+This compilation instruction produces an executable directly in the `src` folder.
+
+## Execution Instructions (Alternate)
 Open terminal while in `CS0_Portfolio` and run:
 <!-- CODE START -->
 ```

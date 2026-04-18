@@ -4,7 +4,18 @@
 ## CS 1336 (Programming Fundamentals Lecture) - UTD Spring 2019
 These homework assignments were done through the course and have accompanying instructions.
 
-## Execution Instructions
+## Execution Instructions (Simple)
+Open terminal while in `CS0_Portfolio` and run:
+<!-- CODE START -->
+```
+cd CS1336/src
+g++ main.cpp hw_exercises.cpp
+./a.exe
+```
+<!-- CODE END -->
+This compilation instruction produces an executable directly in the `src` folder.
+
+## Execution Instructions (Alternate)
 Open terminal while in `CS0_Portfolio` and run:
 <!-- CODE START -->
 ```
