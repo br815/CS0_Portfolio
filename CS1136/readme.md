@@ -34,7 +34,7 @@ Compilation and execution can be done either...
 
 ## src Folder
 ### Header File
-* [lab_exercises.h](/CS1136/lab_exercises.h): contains 21 lab function prototypes
+* [lab_exercises.h](/CS1136/src/lab_exercises.h): contains 21 lab function prototypes
   * 1-1, 1-2
   * 2-1, 2-2, 2-3
   * 3-1, 3-2
@@ -47,8 +47,8 @@ Compilation and execution can be done either...
   * 10-1, 10-2
 
 ### Source Files
-* [main.cpp](/CS1136/main.cpp): program driver containing main()
-* [lab_exercises.cpp](/CS1136/lab_exercises.cpp): implementation of 21 homework functions and 19 helper functions
+* [main.cpp](/CS1136/src/main.cpp): program driver containing main()
+* [lab_exercises.cpp](/CS1136/src/lab_exercises.cpp): implementation of 21 homework functions and 19 helper functions
 
 ## data Folder
 Input files need to be provided using their relative path (ie. with the prefix `../data/`). Output files are also created using the same prefix.

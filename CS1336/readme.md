@@ -45,7 +45,7 @@ Compilation and execution can be done either...
 
 ## src Folder
 ### Header File
-* [hw_exercises.h](/CS1336/hw_exercises.h): contains 20 homework function prototypes
+* [hw_exercises.h](/CS1336/src/hw_exercises.h): contains 20 homework function prototypes
   * 0-0
   * 1-1, 1-2
   * 2-1, 2-2
@@ -58,8 +58,8 @@ Compilation and execution can be done either...
   * 9-1, 9-2
 
 ### Source Files
-* [main.cpp](/CS1336/main.cpp): program driver containing main()
-* [hw_exercises.cpp](/CS1336/hw_exercises.cpp): implementation of 20 homework functions and 12 helper functions
+* [main.cpp](/CS1336/src/main.cpp): program driver containing main()
+* [hw_exercises.cpp](/CS1336/src/hw_exercises.cpp): implementation of 20 homework functions and 12 helper functions
 
 ## data Folder
 Input files need to be provided using their relative path (ie. with the prefix `../data/`). Output files are also created using the same prefix.
