@@ -9,13 +9,14 @@ Open terminal while in `CS0_Portfolio` and run:
 <!-- CODE START -->
 ```
 cd CS1136/src
+mkdir ../build
 g++ main.cpp lab_exercises.cpp -o ../build/labs
 ../build/labs
 ```
 <!-- CODE END -->
-This compilation instruction is intended to produce an executable in the `build` folder (by using the `-o` flag and providing the relative file path `../build/labs`).
+This compilation instruction is intended to produce an executable in the `build` folder (by using the `-o` flag and providing the relative file path `../build/labs`). The `build` folder must be created first if it does not exist (using `mkdir`).
 
-The executable can be named anything (eg. `a.exe`), but `labs.exe` (or just `labs`) is a clearer name.
+The executable can be named anything (eg. `a.exe`), but a descriptive name like `labs.exe` (or just `labs`) is preferred.
 
 Compilation and execution can be done either...
 * ...with or without providing the `.exe` extention (the code block above does it without)

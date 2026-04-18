@@ -9,13 +9,14 @@ Open terminal while in `CS0_Portfolio` and run:
 <!-- CODE START -->
 ```
 cd CS1336/src
+mkdir ../build
 g++ main.cpp hw_exercises.cpp -o ../build/hw
 ../build/hw
 ```
 <!-- CODE END -->
-This compilation instruction is intended to produce an executable in the `build` folder (by using the `-o` flag and providing the relative file path `../build/hw`).
+These compilation instructions are intended to produce an executable in the `build` folder (by using the `-o` flag and providing the relative file path `../build/hw`). The `build` folder must be created first if it does not exist (using `mkdir`).
 
-The executable can be named anything (eg. `a.exe`), but `hw.exe` (or just `hw`) is a clearer name.
+The executable can be named anything (eg. `a.exe`), but a descriptive name like `hw.exe` (or just `hw`) is preferred.
 
 Compilation and execution can be done either...
 * ...with or without providing the `.exe` extention (the code block above does it without)
