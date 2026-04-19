@@ -62,7 +62,7 @@ Compilation and execution can be done either...
 * [hw_exercises.cpp](/CS1336/src/hw_exercises.cpp): implementation of 20 homework functions and 12 helper functions
 
 ## data Folder
-Input files need to be provided using their relative path (ie. with the prefix `../data/`). Output files are also created using the same prefix.
+Input files need to be provided using their relative path (ie. with the prefix `../data/`). Output files should also be created using the same prefix.
 * HW 7-2:
   * [hw7ex2_NumListLong.txt](/CS1336/data/hw7ex2_NumListLong.txt): input file choice 1 (for standard output)
   * [hw7ex2_NumListShort.txt](/CS1336/data/hw7ex2_NumListShort.txt): input file choice 2 (for program testing)
