@@ -51,7 +51,7 @@ Compilation and execution can be done either...
 * [lab_exercises.cpp](/CS1136/src/lab_exercises.cpp): implementation of 21 homework functions and 19 helper functions
 
 ## data Folder
-Input files need to be provided using their relative path (ie. with the prefix `../data/`). Output files are also created using the same prefix.
+Input files need to be provided using their relative path (ie. with the prefix `../data/`). Output files should also be created using the same prefix.
 * Lab 7-1:
   * [lab7ex1_sales.txt](/CS1136/data/lab7ex1_sales.txt): input file
   * [lab7ex1_saleschart.txt](/CS1136/data/lab7ex1_saleschart.txt): output file
