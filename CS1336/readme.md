@@ -58,7 +58,7 @@ Compilation and execution can be done either...
   * 9-1, 9-2
 
 ### Source Files
-* [main.cpp](/CS1336/src/main.cpp): program driver containing main()
+* [main.cpp](/CS1336/src/main.cpp): program driver containing `main()`
 * [hw_exercises.cpp](/CS1336/src/hw_exercises.cpp): implementation of 20 homework functions and 12 helper functions
 
 ## data Folder
