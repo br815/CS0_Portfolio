@@ -59,6 +59,47 @@ To install MinGW on Windows 11 or less, follow [these instructions](https://gith
     <!-- CODE END -->
 After installing MinGW and adding it to `Path`, make sure to restart your IDE to avoid compilation errors.
 
+## C++ Compilation & Execution Overview
+(Using [CS1336](/CS1336/) as an example. CS1336 contains a [src](/CS1336/src/) folder,\
+which contains 2 source files [main.cpp](/CS1336/src/main.cpp) and [hw_exercises.cpp](/CS1336/src/hw_exercises.cpp), and 1 header file [hw_exercises.h](/CS1336/src/hw_exercises.h).)
+
+Open terminal in `CS0_Portfolio` and run:
+<!-- CODE START -->
+```
+cd CS1336                       # cd to project root
+mkdir build                     # make a build folder if it doesn't exist
+g++ src/*.cpp -o build/hw       # compile executable file into the build folder
+build/hw                        # provide the build folder as the path to the .exe file
+```
+<!-- CODE END -->
+C++ compilation needs to occur in the directory that contains the `.cpp` source files. However, C++ execution should occur at the project root (because that is the conventional location from which your program should retrieve any IO files).
+
+In order to achieve both from the project root, this compilation instruction goes through `src/` to compile all `.cpp` source files in [src](/CS1336/src/). Alternatively, each source file can be compiled individually through their paths:
+<!-- CODE START -->
+```
+g++ src/main.cpp src/hw_exercises.cpp -o build/hw
+```
+<!-- CODE END -->
+By default, C++ compilation produces `.exe` files directly in the same folder where compilation occurred; however, the provided compilation instruction uses the `-o` flag to produce the `.exe` file in a [build](/CS1336/build/) folder for clearer file organization.
+
+Then, execution can occur from the project root as long as the path to the executable is specified, which for this project is through `build/`.
+
+Technically, compilation & execution *can* occur from anywhere as long as the user provides the necessary relative file paths to the source files & executable. However, for user ease in this project, file paths to IO files are hard-coded in the source code to be preprended with `data/` so that the user can execute easily from the project root while still only needing to provide the base name of any IO file (eg. [`hw7ex2_NumListShort.txt`](/CS1336/data/hw7ex2_NumListShort.txt)). So for this project, compilation & execution *must* occur from the project root; or, the hard-coded preprending of the `data/` file path would need to be edited directly in the source code.
+
+Similar compilation & execution behavior can be achieved through alternative commands, like:
+<!-- CODE START -->
+```
+cd CS1336/src
+g++ *.cpp                       # or, g++ main.cpp hw_exercises.cpp (note that here, the default a.exe file is produced directly in src)
+cd ..                           # go back to the project root
+src/a.exe                       # can be executed with or without providing the .exe extension
+```
+<!-- CODE END -->
+
+Note that compilation and execution can be done either...
+* ...with or without providing the `.exe` extention (the code blocks above illustrate both)
+* ...with a forward slash `/` or backslash `\` (the code blocks above do it with `/`)
+
 ## Notes
 As a learning exercise, some of my code explores alternative designs that go beyond what was required for these courses.
 

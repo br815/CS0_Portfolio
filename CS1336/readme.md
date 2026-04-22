@@ -1,36 +1,19 @@
 <!-- To preview this markdown file in VSCode: Ctrl+Shift+V -->
 
-# CS0 Lecture Portfolio - Bushra Rahman
-## CS 1336 (Programming Fundamentals Lecture) - UTD Spring 2019
+# CS0 Lecture Portfolio | CS 1336 (Programming Fundamentals Lecture)
+## Author: Bushra Rahman
 These homework assignments were done through the course and have accompanying instructions.
 
 ## Execution Instructions
-Open terminal while in `CS0_Portfolio` and run:
+Open terminal in `CS0_Portfolio` and run:
 <!-- CODE START -->
 ```
-cd CS1336/src
-g++ main.cpp hw_exercises.cpp
-./a.exe
+cd CS1336
+mkdir build
+g++ src/main.cpp src/hw_exercises.cpp -o build/hw
+build/hw
 ```
 <!-- CODE END -->
-This compilation instruction produces an executable directly in the `src` folder.
-
-Alternatively, run:
-<!-- CODE START -->
-```
-cd CS1336/src
-mkdir ../build
-g++ main.cpp hw_exercises.cpp -o ../build/hw
-../build/hw
-```
-<!-- CODE END -->
-This compilation instruction is intended to produce an executable in a `build` folder (by using the `-o` flag and providing the relative file path `../build/hw`). A `build` folder must first be created in `CS1336` if it does not exist (using `mkdir`).
-
-The executable can be named anything (eg. `a.exe`), but a descriptive name like `hw.exe` (or just `hw`) is preferred.
-
-Compilation and execution can be done either...
-* ...with or without providing the `.exe` extention (the code block above does it without)
-* ...with a forward slash `/` or backslash `\` (the code block above does it with `/`)
 
 ## Homework Instructions
 * [HW 1: Basic Programming](/CS1336/instructions/HW1_BasicProgramming.pdf)
@@ -62,7 +45,7 @@ Compilation and execution can be done either...
 * [hw_exercises.cpp](/CS1336/src/hw_exercises.cpp): implementation of 20 homework functions and 12 helper functions
 
 ## data Folder
-Input files need to be provided using their relative path (ie. with the prefix `../data/`). Output files should also be created using the same prefix.
+When executing from the project root, input & output file names must be provided through their relative path (ie. with the prepend `data/`).
 * HW 7-2:
   * [hw7ex2_NumListLong.txt](/CS1336/data/hw7ex2_NumListLong.txt): input file choice 1 (for standard output)
   * [hw7ex2_NumListShort.txt](/CS1336/data/hw7ex2_NumListShort.txt): input file choice 2 (for program testing)

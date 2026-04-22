@@ -53,6 +53,19 @@ double lab10ex2_average(double values[][lab10ex2_MAX_COLUMNS], int numberRows);
 double lab10ex2_columnAverage(double values[][lab10ex2_MAX_COLUMNS], int column, int numberRows);
 double lab10ex2_smallestValue(double values[][lab10ex2_MAX_COLUMNS], int currentRow);
 
+// folder name containing all IO files, to be prepended onto any hard-coded IO filename in order to provide its relative path
+const string IO_FILE_DIR = "data/";
+// helper function to prepend the file name with its relative path if its relative path is not provided
+string getFilepath(string IOfileName)
+{
+	// compare given file name with the substring of IO_FILE_DIR to check if IO_FILE_DIR is present; if not, prepend it
+	if (IOfileName.compare(0, IO_FILE_DIR.length(), IO_FILE_DIR) != 0)
+	{
+		IOfileName = IO_FILE_DIR + IOfileName;
+	}
+	return IOfileName;
+}
+
 
 
 /*	Lab #1 Exercise #1 (Date): 
@@ -558,8 +571,8 @@ void lab7ex1()
 	ifstream inputFile;
 	string inputFileName;
 	cout << "Please enter the name of the sales information input file: ";
-	cin >> inputFileName;			// the input file provided is ../data/lab7ex1_sales.txt
-
+	cin >> inputFileName;							// the input file provided is lab7ex1_sales.txt
+	inputFileName = getFilepath(inputFileName);		// this function call is necessary to get the filepath for the input file
 	inputFile.open(inputFileName);
 
 	int validRecordCounter = 0;		// tracks the number of valid values in the input file
@@ -572,8 +585,14 @@ void lab7ex1()
 	// the input file opened successfully
 	if (inputFile)
 	{
+		// creates the output file for bar chart
 		ofstream outputFile;
-		outputFile.open("../data/lab7ex1_saleschart.txt");
+		// the output file provided is lab7ex1_saleschart.txt
+		string outputFileName = "lab7ex1_saleschart.txt";
+		// get the output file path
+		outputFileName = getFilepath(outputFileName);
+		// open the output file
+		outputFile.open(outputFileName);
 
 		// the output file opened successfully 
 		if (outputFile)
@@ -641,8 +660,8 @@ void lab7ex2()
 	ifstream inputFile;
 	string inputFileName;
 	cout << "Please enter the name of the input file containing values to be averaged: ";
-	cin >> inputFileName;			// the input file provided is ../data/lab7ex2_avg.txt
-
+	cin >> inputFileName;							// the input file provided is lab7ex2_avg.txt
+	inputFileName = getFilepath(inputFileName);		// this function call is necessary to get the filepath for the input file
 	inputFile.open(inputFileName);
 
 	int validRecordCounter = 0;		// tracks the number of valid values in the input file
@@ -656,7 +675,12 @@ void lab7ex2()
 	{
 		// creates the output file for invalid values
 		ofstream outputFile;
-		outputFile.open("../data/lab7ex2_invalids.txt");
+		// the output file provided is lab7ex2_invalids.txt
+		string outputFileName = "lab7ex2_invalids.txt";
+		// get the output file path
+		outputFileName = getFilepath(outputFileName);
+		// open the output file
+		outputFile.open(outputFileName);
 
 		cout << "Reading from file \"" << inputFileName << "\"" << endl;
 
@@ -1033,17 +1057,23 @@ void lab9ex2()
 	ifstream inputFile;
 	string inputFileName;
 	cout << "Please enter the name of the input file containing your bank account investment data: ";
-	cin >> inputFileName;		// the input file provided is ../data/lab9ex2_data.txt
-	inputFile.open(inputFileName);
+	cin >> inputFileName;							// the input file provided is lab9ex2_data.txt
+	inputFileName = getFilepath(inputFileName);		// get the input file path
+	inputFile.open(inputFileName);					// open the input file
 
 	bool writeHeader = true;	// the control variable for lab9ex2_writeOutput() to write headers to the output file only once
 
 	// the input file was successfully opened
 	if (inputFile)
 	{
-		// creates an output file, names it, and opens it
+		// creates the output file for the calculated report
 		ofstream outputFile;
-		outputFile.open("../data/lab9ex2_output.xls");
+		// the output file provided is lab9ex2_output.xls
+		string outputFileName = "lab9ex2_output.xls";
+		// get the output file path
+		outputFileName = getFilepath(outputFileName);
+		// open the output file
+		outputFile.open(outputFileName);
 
 		// the output file opened successfully 
 		if (outputFile)
@@ -1191,7 +1221,8 @@ void lab10ex1()
 	// input the file with the student's answers
 	string inputFileName;
 	cout << "Please enter the name of the input file containing the student's answers: ";
-	cin >> inputFileName;	// the input file provided is ../data/lab10ex1_student.txt
+	cin >> inputFileName;							// the input file provided is lab10ex1_student.txt
+	inputFileName = getFilepath(inputFileName);		// this function call is necessary to get the filepath for the input file
 
 	// create arrays for both the student's answers and the correct answers
 	char studentResponses[lab10ex1_ARRAY_SIZE];
@@ -1206,7 +1237,8 @@ void lab10ex1()
 	{
 		// input the file with the correct answers
 		cout << "Please enter the name of the input file containing the correct answers: ";
-		cin >> inputFileName;	// the input file provided is ../data/lab10ex1_answers.txt
+		cin >> inputFileName;							// the input file provided is lab10ex1_answers.txt
+		inputFileName = getFilepath(inputFileName);		// this function call is necessary to get the filepath for the input file
 		correctReadStatus = lab10ex1_readArray(correctResponses, inputFileName);
 	}
 	
@@ -1311,7 +1343,8 @@ void lab10ex2()
 	// input a file name
 	string inputFileName;
 	cout << "Please enter the name of the input file containing grades: ";
-	cin >> inputFileName;	// the input file provided is ../data/lab10ex2_grades.txt
+	cin >> inputFileName;							// the input file provided is lab10ex2_grades.txt
+	inputFileName = getFilepath(inputFileName);		// this function call is necessary to get the filepath for the input file
 
 	// array of grades
 	double grades[lab10ex2_MAX_ROWS][lab10ex2_MAX_COLUMNS];

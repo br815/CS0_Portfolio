@@ -1,36 +1,19 @@
 <!-- To preview this markdown file in VSCode: Ctrl+Shift+V -->
 
-# CS0 Laboratory Portfolio - Bushra Rahman
-## CS 1136 (Programming Fundamentals Laboratory) - UTD Spring 2019
+# CS0 Laboratory Portfolio | CS 1136 (Programming Fundamentals Laboratory)
+## Author: Bushra Rahman
 These labs assignments were done through [zyBooks](https://www.zybooks.com/).
 
 ## Execution Instructions (Simple)
-Open terminal while in `CS0_Portfolio` and run:
+Open terminal in `CS0_Portfolio` and run:
 <!-- CODE START -->
 ```
-cd CS1136/src
-g++ main.cpp lab_exercises.cpp
-./a.exe
+cd CS1136
+mkdir build
+g++ src/main.cpp src/lab_exercises.cpp -o build/labs
+build/labs
 ```
 <!-- CODE END -->
-This compilation instruction produces an executable directly in the `src` folder.
-
-Alternatively, run:
-<!-- CODE START -->
-```
-cd CS1136/src
-mkdir ../build
-g++ main.cpp lab_exercises.cpp -o ../build/labs
-../build/labs
-```
-<!-- CODE END -->
-This compilation instruction is intended to produce an executable in a `build` folder (by using the `-o` flag and providing the relative file path `../build/labs`). A `build` folder must first be created in `CS1136` if it does not exist (using `mkdir`).
-
-The executable can be named anything (eg. `a.exe`), but a descriptive name like `labs.exe` (or just `labs`) is preferred.
-
-Compilation and execution can be done either...
-* ...with or without providing the `.exe` extention (the code block above does it without)
-* ...with a forward slash `/` or backslash `\` (the code block above does it with `/`)
 
 ## src Folder
 ### Header File
@@ -51,7 +34,7 @@ Compilation and execution can be done either...
 * [lab_exercises.cpp](/CS1136/src/lab_exercises.cpp): implementation of 21 homework functions and 19 helper functions
 
 ## data Folder
-Input files need to be provided using their relative path (ie. with the prefix `../data/`). Output files should also be created using the same prefix.
+When executing from the project root, input & output file names must be provided through their relative path (ie. with the prepend `data/`).
 * Lab 7-1:
   * [lab7ex1_sales.txt](/CS1136/data/lab7ex1_sales.txt): input file
   * [lab7ex1_saleschart.txt](/CS1136/data/lab7ex1_saleschart.txt): output file
